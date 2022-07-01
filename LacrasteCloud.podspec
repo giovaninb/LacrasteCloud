@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LacrasteCloud'
-  s.version          = '0.0.1'
+  s.version          = 'main'
   s.summary          = 'LacrasteCloud makes CloudKit operations easier and less verbose.'
 
 # This description is used to generate tags and improve search results.
