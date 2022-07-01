@@ -41,10 +41,10 @@
 		607FACE51AFB9204008FA782 /* LacrasteCloud_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LacrasteCloud_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6C88F91EF7916F4BA6EA97EB /* LacrasteCloud.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LacrasteCloud.podspec; path = ../LacrasteCloud.podspec; sourceTree = "<group>"; };
-		88C020B125D3B86560797733 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6C88F91EF7916F4BA6EA97EB /* LacrasteCloud.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LacrasteCloud.podspec; path = ../LacrasteCloud.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		88C020B125D3B86560797733 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A0E7D423D9F6EEDBE6575D6B /* Pods-LacrasteCloud_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacrasteCloud_Tests.release.xcconfig"; path = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D04876755EBC40EBF18FEE20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D04876755EBC40EBF18FEE20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DA63E1EB7778E0D1A4763B8C /* Pods_LacrasteCloud_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LacrasteCloud_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7D994469227D8630B3F6C3 /* Pods-LacrasteCloud_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacrasteCloud_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,6 @@
 				EE7D994469227D8630B3F6C3 /* Pods-LacrasteCloud_Tests.debug.xcconfig */,
 				A0E7D423D9F6EEDBE6575D6B /* Pods-LacrasteCloud_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

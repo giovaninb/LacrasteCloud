@@ -1,0 +1,6 @@
+framework module LacrasteCloud {
+  umbrella header "LacrasteCloud-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BA3924DAFC357C83FC7E56674DA29E1 /* Pods-LacrasteCloud_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */; };
+		7770147384527F17DB5208E8EB31308C /* Pods-LacrasteCloud_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1232495165133C5EAB9559804F0F09 /* Pods-LacrasteCloud_Tests-dummy.m */; };
+		80535AD62864CF3E00ACA7AD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD52864CF3E00ACA7AD /* Storage.swift */; };
+		80535AD82864CF9300ACA7AD /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD72864CF9300ACA7AD /* Parser.swift */; };
+		80535ADA2864CFBE00ACA7AD /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD92864CFBE00ACA7AD /* Storable.swift */; };
+		80535ADC2864CFEE00ACA7AD /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535ADB2864CFEE00ACA7AD /* StorageType.swift */; };
+		80535ADE2864D04800ACA7AD /* StorageErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535ADD2864D04800ACA7AD /* StorageErrors.swift */; };
+		8E9EFC88E0D1D9E1B29D7B87DDA1B927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B1B53F8E3E0C81660F50FEFCDF00588A /* Pods-LacrasteCloud_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4276E648446C1D97826A5A26BC9701C /* LacrasteCloud-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C46F688321BAA0058140FA70217DE73E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CE1266A79A5353224E62B45C0D86A18F /* Pods-LacrasteCloud_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6BACF30CD4BDB9AF69CBAD57984687 /* Pods-LacrasteCloud_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1BDD00990BF4B8DE264A66693FCE8BD /* LacrasteCloud-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */; };
+		EBAEE2864F6818769568267A670275F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4382D1CD1FA5815FD3DDD46CEAE0724B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDE8469C8A02A7EFDF94EC4C022456AB;
+			remoteInfo = LacrasteCloud;
+		};
+		8D456C6912773A602BD0EBEFE0F03FC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39B026F7FDDAA722D8FF002F08879350;
+			remoteInfo = "Pods-LacrasteCloud_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LacrasteCloud_Example-umbrella.h"; sourceTree = "<group>"; };
+		07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LacrasteCloud_Example"; path = Pods_LacrasteCloud_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C7E15AABCBC67FB760D6DC2BCB25238 /* Pods-LacrasteCloud_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LacrasteCloud_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2A9E6A5470D0E5B55F8E2CCBCEB69FBA /* Pods-LacrasteCloud_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3355A3E99F3CAF5688C905DAADFA75C9 /* Pods-LacrasteCloud_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Example-Info.plist"; sourceTree = "<group>"; };
+		34622891005E7EF56B8977FC17C471C5 /* Pods-LacrasteCloud_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LacrasteCloud_Tests.modulemap"; sourceTree = "<group>"; };
+		4AD1708347EF2DD36910F59950315E2B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		60140B345B0B0C67C9994A7293A66CA4 /* Pods-LacrasteCloud_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LacrasteCloud_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.release.xcconfig; sourceTree = "<group>"; };
+		6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-umbrella.h"; sourceTree = "<group>"; };
+		6EEB2EA217BC7524F41FC3478E175030 /* LacrasteCloud-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LacrasteCloud-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		80535AD52864CF3E00ACA7AD /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = LacrasteCloud/Classes/Storage.swift; sourceTree = "<group>"; };
+		80535AD72864CF9300ACA7AD /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = LacrasteCloud/Classes/Parser.swift; sourceTree = "<group>"; };
+		80535AD92864CFBE00ACA7AD /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Storable.swift; path = LacrasteCloud/Classes/Storable.swift; sourceTree = "<group>"; };
+		80535ADB2864CFEE00ACA7AD /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageType.swift; path = LacrasteCloud/Classes/StorageType.swift; sourceTree = "<group>"; };
+		80535ADD2864D04800ACA7AD /* StorageErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageErrors.swift; path = LacrasteCloud/Classes/StorageErrors.swift; sourceTree = "<group>"; };
+		8AB6713412E8D3F08B74C44A2548F4EC /* LacrasteCloud-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-prefix.pch"; sourceTree = "<group>"; };
+		8E1232495165133C5EAB9559804F0F09 /* Pods-LacrasteCloud_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LacrasteCloud_Tests-dummy.m"; sourceTree = "<group>"; };
+		9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Example.release.xcconfig"; sourceTree = "<group>"; };
+		92B6787F2DD0A13E42D60A537CA3CB4D /* Pods-LacrasteCloud_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7123C3C70A301EF40CC21ADDAA48F49 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LacrasteCloud-dummy.m"; sourceTree = "<group>"; };
+		B0D81580C9341BADFBB3FDEC5872725B /* LacrasteCloud.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LacrasteCloud.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B66515D4E3DB6A15FA4ACF04D5681CD4 /* Pods-LacrasteCloud_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC6BACF30CD4BDB9AF69CBAD57984687 /* Pods-LacrasteCloud_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LacrasteCloud_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.debug.xcconfig; sourceTree = "<group>"; };
+		DE446BDAABF7DAE455474EB31A59602A /* LacrasteCloud.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LacrasteCloud.modulemap; sourceTree = "<group>"; };
+		DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LacrasteCloud_Tests"; path = Pods_LacrasteCloud_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C5068F24F4C23FFD4F56555ACBD31F /* Pods-LacrasteCloud_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Tests-Info.plist"; sourceTree = "<group>"; };
+		E97CC15182447038EB2A8FEBB89A5292 /* Pods-LacrasteCloud_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ED819EB3C58CCC71E302FAC674034138 /* Pods-LacrasteCloud_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LacrasteCloud_Example-dummy.m"; sourceTree = "<group>"; };
+		F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LacrasteCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2B705847A649CA80669BD81C063193 /* Pods-LacrasteCloud_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LacrasteCloud_Example.modulemap"; sourceTree = "<group>"; };
+		FE2AB9EA743E8CC924535AA82D07F242 /* Pods-LacrasteCloud_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LacrasteCloud_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20E027D91607AA51FE7E9256BFDFF257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAEE2864F6818769568267A670275F3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E65E375F0811FD00FC9C3B5AF9B477F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46F688321BAA0058140FA70217DE73E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DFEBB90473119267CAE4AFC4E70B66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E9EFC88E0D1D9E1B29D7B87DDA1B927 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B14F9D1BEA13CD70D988F5B1D84B0E8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CC1673D66F8E1C7E8E76EB21CBFC773 /* LacrasteCloud */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		256DEF2F9F96BE8FDACD585A6F059209 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE446BDAABF7DAE455474EB31A59602A /* LacrasteCloud.modulemap */,
+				A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */,
+				6EEB2EA217BC7524F41FC3478E175030 /* LacrasteCloud-Info.plist */,
+				8AB6713412E8D3F08B74C44A2548F4EC /* LacrasteCloud-prefix.pch */,
+				6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */,
+				D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */,
+				64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LacrasteCloud";
+			sourceTree = "<group>";
+		};
+		3CC1673D66F8E1C7E8E76EB21CBFC773 /* LacrasteCloud */ = {
+			isa = PBXGroup;
+			children = (
+				63629D853D190F1FEC11BDEADD87ABE9 /* Pod */,
+				256DEF2F9F96BE8FDACD585A6F059209 /* Support Files */,
+				80535AD52864CF3E00ACA7AD /* Storage.swift */,
+				80535AD72864CF9300ACA7AD /* Parser.swift */,
+				80535AD92864CFBE00ACA7AD /* Storable.swift */,
+				80535ADB2864CFEE00ACA7AD /* StorageType.swift */,
+				80535ADD2864D04800ACA7AD /* StorageErrors.swift */,
+			);
+			name = LacrasteCloud;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		47846BE80C8C0639CE167C2C5A872EB4 /* Pods-LacrasteCloud_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				34622891005E7EF56B8977FC17C471C5 /* Pods-LacrasteCloud_Tests.modulemap */,
+				60140B345B0B0C67C9994A7293A66CA4 /* Pods-LacrasteCloud_Tests-acknowledgements.markdown */,
+				E97CC15182447038EB2A8FEBB89A5292 /* Pods-LacrasteCloud_Tests-acknowledgements.plist */,
+				8E1232495165133C5EAB9559804F0F09 /* Pods-LacrasteCloud_Tests-dummy.m */,
+				E6C5068F24F4C23FFD4F56555ACBD31F /* Pods-LacrasteCloud_Tests-Info.plist */,
+				BC6BACF30CD4BDB9AF69CBAD57984687 /* Pods-LacrasteCloud_Tests-umbrella.h */,
+				2A9E6A5470D0E5B55F8E2CCBCEB69FBA /* Pods-LacrasteCloud_Tests.debug.xcconfig */,
+				ED819EB3C58CCC71E302FAC674034138 /* Pods-LacrasteCloud_Tests.release.xcconfig */,
+			);
+			name = "Pods-LacrasteCloud_Tests";
+			path = "Target Support Files/Pods-LacrasteCloud_Tests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		63629D853D190F1FEC11BDEADD87ABE9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B0D81580C9341BADFBB3FDEC5872725B /* LacrasteCloud.podspec */,
+				4AD1708347EF2DD36910F59950315E2B /* LICENSE */,
+				A7123C3C70A301EF40CC21ADDAA48F49 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */,
+				07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */,
+				DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5C580DD4CE4582E3E533B198368230A /* Pods-LacrasteCloud_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B705847A649CA80669BD81C063193 /* Pods-LacrasteCloud_Example.modulemap */,
+				FE2AB9EA743E8CC924535AA82D07F242 /* Pods-LacrasteCloud_Example-acknowledgements.markdown */,
+				B66515D4E3DB6A15FA4ACF04D5681CD4 /* Pods-LacrasteCloud_Example-acknowledgements.plist */,
+				F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */,
+				0C7E15AABCBC67FB760D6DC2BCB25238 /* Pods-LacrasteCloud_Example-frameworks.sh */,
+				3355A3E99F3CAF5688C905DAADFA75C9 /* Pods-LacrasteCloud_Example-Info.plist */,
+				00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */,
+				92B6787F2DD0A13E42D60A537CA3CB4D /* Pods-LacrasteCloud_Example.debug.xcconfig */,
+				9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */,
+			);
+			name = "Pods-LacrasteCloud_Example";
+			path = "Target Support Files/Pods-LacrasteCloud_Example";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1B14F9D1BEA13CD70D988F5B1D84B0E8 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */,
+				EBCF743DD2C60265F5E32F4329162657 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBCF743DD2C60265F5E32F4329162657 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C580DD4CE4582E3E533B198368230A /* Pods-LacrasteCloud_Example */,
+				47846BE80C8C0639CE167C2C5A872EB4 /* Pods-LacrasteCloud_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		68AF76285D76EC6A5D22AB0A3C503B66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1266A79A5353224E62B45C0D86A18F /* Pods-LacrasteCloud_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		856F2387A14DDEAA60DE550BFD474ECC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B53F8E3E0C81660F50FEFCDF00588A /* Pods-LacrasteCloud_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD6443382EF4EEBA838F253627DFC141 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4276E648446C1D97826A5A26BC9701C /* LacrasteCloud-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		217693740DDD9331759BCAB22B5DFA06 /* Pods-LacrasteCloud_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95C18E4CD46640ACDDF98775314BD8A0 /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Tests" */;
+			buildPhases = (
+				68AF76285D76EC6A5D22AB0A3C503B66 /* Headers */,
+				8E01354A3D42BCE7F3C5A6FDF1C20431 /* Sources */,
+				C1DFEBB90473119267CAE4AFC4E70B66 /* Frameworks */,
+				82AF7113082045F8E3BB27E3EA78DC06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE0FCF82A431B3B4958B68E4CAA3D6EE /* PBXTargetDependency */,
+			);
+			name = "Pods-LacrasteCloud_Tests";
+			productName = Pods_LacrasteCloud_Tests;
+			productReference = DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E520411A101FB5FF4E55A5326A953FDC /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */;
+			buildPhases = (
+				856F2387A14DDEAA60DE550BFD474ECC /* Headers */,
+				62DFEBA9B6FD0929497038276189C3B4 /* Sources */,
+				3E65E375F0811FD00FC9C3B5AF9B477F /* Frameworks */,
+				DE0CCB8D062B39EB6E9A40F35D465BAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92D02A8DC62CDFAE318FC30B960BD166 /* PBXTargetDependency */,
+			);
+			name = "Pods-LacrasteCloud_Example";
+			productName = Pods_LacrasteCloud_Example;
+			productReference = 07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BCDD6816E4687E576EBC9FB23044B50 /* Build configuration list for PBXNativeTarget "LacrasteCloud" */;
+			buildPhases = (
+				DD6443382EF4EEBA838F253627DFC141 /* Headers */,
+				E79DB005A574D48F9A9D4D27746720D6 /* Sources */,
+				20E027D91607AA51FE7E9256BFDFF257 /* Frameworks */,
+				70A8E16AF2E0A1787DE099DDCD5BCD85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LacrasteCloud;
+			productName = LacrasteCloud;
+			productReference = F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CDE8469C8A02A7EFDF94EC4C022456AB = {
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */,
+				39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */,
+				217693740DDD9331759BCAB22B5DFA06 /* Pods-LacrasteCloud_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70A8E16AF2E0A1787DE099DDCD5BCD85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82AF7113082045F8E3BB27E3EA78DC06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE0CCB8D062B39EB6E9A40F35D465BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62DFEBA9B6FD0929497038276189C3B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA3924DAFC357C83FC7E56674DA29E1 /* Pods-LacrasteCloud_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E01354A3D42BCE7F3C5A6FDF1C20431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7770147384527F17DB5208E8EB31308C /* Pods-LacrasteCloud_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E79DB005A574D48F9A9D4D27746720D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80535ADC2864CFEE00ACA7AD /* StorageType.swift in Sources */,
+				D1BDD00990BF4B8DE264A66693FCE8BD /* LacrasteCloud-dummy.m in Sources */,
+				80535ADA2864CFBE00ACA7AD /* Storable.swift in Sources */,
+				80535AD62864CF3E00ACA7AD /* Storage.swift in Sources */,
+				80535ADE2864D04800ACA7AD /* StorageErrors.swift in Sources */,
+				80535AD82864CF9300ACA7AD /* Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92D02A8DC62CDFAE318FC30B960BD166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LacrasteCloud;
+			target = CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */;
+			targetProxy = 4382D1CD1FA5815FD3DDD46CEAE0724B /* PBXContainerItemProxy */;
+		};
+		AE0FCF82A431B3B4958B68E4CAA3D6EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LacrasteCloud_Example";
+			target = 39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */;
+			targetProxy = 8D456C6912773A602BD0EBEFE0F03FC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3B2C7E0696B65FDED2DB554458704A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
+				PRODUCT_MODULE_NAME = LacrasteCloud;
+				PRODUCT_NAME = LacrasteCloud;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E60F37B8F8133DDCAD9AAE6B5986F4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92B6787F2DD0A13E42D60A537CA3CB4D /* Pods-LacrasteCloud_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0F20F88869A8B59CA0035D4E761F71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A4586108FD7750495C1E698A1AC4C78D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A9E6A5470D0E5B55F8E2CCBCEB69FBA /* Pods-LacrasteCloud_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8C0FACD3888ABEE290D3409C0282382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
+				PRODUCT_MODULE_NAME = LacrasteCloud;
+				PRODUCT_NAME = LacrasteCloud;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F3035976656D55D926DF44A9D90C9916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED819EB3C58CCC71E302FAC674034138 /* Pods-LacrasteCloud_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BCDD6816E4687E576EBC9FB23044B50 /* Build configuration list for PBXNativeTarget "LacrasteCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C0FACD3888ABEE290D3409C0282382 /* Debug */,
+				3B2C7E0696B65FDED2DB554458704A09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95C18E4CD46640ACDDF98775314BD8A0 /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4586108FD7750495C1E698A1AC4C78D /* Debug */,
+				F3035976656D55D926DF44A9D90C9916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E520411A101FB5FF4E55A5326A953FDC /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E60F37B8F8133DDCAD9AAE6B5986F4C /* Debug */,
+				A0F20F88869A8B59CA0035D4E761F71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
