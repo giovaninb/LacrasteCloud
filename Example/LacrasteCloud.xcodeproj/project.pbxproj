@@ -10,11 +10,16 @@
 		182DD138FE5E82CEBBA4B312 /* Pods_LacrasteCloud_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F4FC73BAEDD9BAE8D11C8E /* Pods_LacrasteCloud_Example.framework */; };
 		1AE51A546A7F0454888B0A04 /* Pods_LacrasteCloud_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA63E1EB7778E0D1A4763B8C /* Pods_LacrasteCloud_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* MainViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		80535AE2287369F300ACA7AD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AE1287369F300ACA7AD /* Post.swift */; };
+		80535AE428736A9D00ACA7AD /* PostParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AE328736A9D00ACA7AD /* PostParser.swift */; };
+		80535AE82873716500ACA7AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AE72873716500ACA7AD /* UIViewController+Extensions.swift */; };
+		80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AEA287371C000ACA7AD /* PostViewController.swift */; };
+		80535AEF28737BB200ACA7AD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80535AEE28737BB200ACA7AD /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +39,7 @@
 		607FACD01AFB9204008FA782 /* LacrasteCloud_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LacrasteCloud_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +47,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6C88F91EF7916F4BA6EA97EB /* LacrasteCloud.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LacrasteCloud.podspec; path = ../LacrasteCloud.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		80535AE1287369F300ACA7AD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		80535AE328736A9D00ACA7AD /* PostParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParser.swift; sourceTree = "<group>"; };
+		80535AE72873716500ACA7AD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		80535AEA287371C000ACA7AD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		80535AED28737BAD00ACA7AD /* LacrasteCloud_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LacrasteCloud_Example.entitlements; sourceTree = "<group>"; };
+		80535AEE28737BB200ACA7AD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		88C020B125D3B86560797733 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A0E7D423D9F6EEDBE6575D6B /* Pods-LacrasteCloud_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacrasteCloud_Tests.release.xcconfig"; path = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D04876755EBC40EBF18FEE20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -55,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DD138FE5E82CEBBA4B312 /* Pods_LacrasteCloud_Example.framework in Frameworks */,
+				80535AEF28737BB200ACA7AD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +84,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				80535AED28737BAD00ACA7AD /* LacrasteCloud_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for LacrasteCloud */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -93,11 +106,11 @@
 		607FACD21AFB9204008FA782 /* Example for LacrasteCloud */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				80535AE62873714600ACA7AD /* Extensions */,
+				80535AE0287369C900ACA7AD /* Models */,
+				80535AEC287372DF00ACA7AD /* Controllers */,
+				80535AE528736F4800ACA7AD /* Views */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for LacrasteCloud";
@@ -107,6 +120,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -139,6 +153,41 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		80535AE0287369C900ACA7AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80535AE1287369F300ACA7AD /* Post.swift */,
+				80535AE328736A9D00ACA7AD /* PostParser.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		80535AE528736F4800ACA7AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		80535AE62873714600ACA7AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80535AE72873716500ACA7AD /* UIViewController+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		80535AEC287372DF00ACA7AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* MainViewController.swift */,
+				80535AEA287371C000ACA7AD /* PostViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		D7A9A9D75DF6F9B3D430CDEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +202,7 @@
 		E7196B3F969DCD15B4948C17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80535AEE28737BB200ACA7AD /* CloudKit.framework */,
 				19F4FC73BAEDD9BAE8D11C8E /* Pods_LacrasteCloud_Example.framework */,
 				DA63E1EB7778E0D1A4763B8C /* Pods_LacrasteCloud_Tests.framework */,
 			);
@@ -212,6 +262,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VHG5SDJ6H6;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -331,8 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */,
+				80535AE2287369F300ACA7AD /* Post.swift in Sources */,
+				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				80535AE428736A9D00ACA7AD /* PostParser.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				80535AE82873716500ACA7AD /* UIViewController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +533,8 @@
 			baseConfigurationReference = 3B3B3B4261E9C67CBD13FFAE /* Pods-LacrasteCloud_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -493,6 +550,8 @@
 			baseConfigurationReference = 1A567B0DC58208D104A12276 /* Pods-LacrasteCloud_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

@@ -149,8 +149,7 @@ public struct Storage {
         
         let query = CKQuery(recordType: L.reference, predicate: NSPredicate(value: true))
         
-        storageType.database.perform(query, inZoneWith: nil) {
-            results, error in
+        storageType.database.perform(query, inZoneWith: nil) { results, error in
             
             if error != nil {
                 completion(.failure(StorageErrors.DDCDataRetrieval))
