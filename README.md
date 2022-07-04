@@ -1,6 +1,6 @@
 # LacrasteCloud
 
-[![CI Status](https://img.shields.io/travis/Giovani Bettoni/LacrasteCloud.svg?style=flat)](https://travis-ci.org/Giovani Bettoni/LacrasteCloud)
+<!--[![CI Status](https://img.shields.io/travis/Giovani Bettoni/LacrasteCloud.svg?style=flat)](https://travis-ci.org/Giovani Bettoni/LacrasteCloud)-->
 [![Version](https://img.shields.io/cocoapods/v/LacrasteCloud.svg?style=flat)](https://cocoapods.org/pods/LacrasteCloud)
 [![License](https://img.shields.io/cocoapods/l/LacrasteCloud.svg?style=flat)](https://cocoapods.org/pods/LacrasteCloud)
 [![Platform](https://img.shields.io/cocoapods/p/LacrasteCloud.svg?style=flat)](https://cocoapods.org/pods/LacrasteCloud)
