@@ -264,6 +264,7 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = VHG5SDJ6H6;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -535,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -542,6 +544,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LacrasteCloud-Example.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Example Lacraste Cloud Dev";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -553,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -560,6 +564,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LacrasteCloud-Example.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Example Lacraste Cloud Dev";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
