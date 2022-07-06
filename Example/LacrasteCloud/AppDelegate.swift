@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let query = CKQuery(recordType: "Post", predicate: NSPredicate(value: true))
+//        CKContainer.init(identifier: "iCloud.org.cocoapods.demo.LacrasteCloud-Example").privateCloudDatabase.perform(query, inZoneWith: nil, completionHandler: { (result, error) in
+//            print(result)
+//            print(error)
+//        })
+        
         return true
     }
 

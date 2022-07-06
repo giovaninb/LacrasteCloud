@@ -252,8 +252,7 @@ public struct Storage {
             return completion(.failure(StorageErrors.DDCParsingFailure))
         }
                 
-        storageType.database.save(record) {
-            (savedRecord, error) in
+        storageType.database.save(record) { (savedRecord, error) in
             
             if error != nil {
                 completion(.failure(StorageErrors.DDCDataInsertion))

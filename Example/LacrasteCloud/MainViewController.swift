@@ -17,13 +17,16 @@ class MainViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchPosts()
         
     }
 
     override func viewDidAppear(_ animated: Bool) {
         refreshTable()
-        //fetchPosts()
+        fetchPosts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshTable()
     }
     
     func refreshTable() {
@@ -53,8 +56,8 @@ class MainViewController: UITableViewController {
         })
     }
     
-    private func completePost(withId id: String) {
-        Storage.remove(id) { result in
+    private func deletePost(withId id: String) {
+        Storage.remove(storageType: .privateStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), id) { result in
             
             switch result {
             case .success(_):
@@ -100,7 +103,7 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let complete = UIContextualAction(style: .normal, title: "Complete", handler: { (action, view, completionHandler) in
+        let delete = UIContextualAction(style: .normal, title: "Delete", handler: { (action, view, completionHandler) in
             
             guard let id = self.posts[indexPath.row].recordName
             else { return }
@@ -108,11 +111,11 @@ class MainViewController: UITableViewController {
             self.posts = self.posts.filter({ $0.recordName != id })
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.completePost(withId: id)
+            self.deletePost(withId: id)
             
             completionHandler(true)
         })
-        complete.backgroundColor = UIColor.systemGreen
+        delete.backgroundColor = UIColor.systemRed
         
         let edit = UIContextualAction(style: .normal, title: "Edit", handler: {
             (action, view, completionHandler) in
@@ -121,9 +124,9 @@ class MainViewController: UITableViewController {
             
             completionHandler(true)
         })
-        edit.backgroundColor = UIColor.systemBlue
+        edit.backgroundColor = UIColor.systemGreen
         
-        let configuration = UISwipeActionsConfiguration(actions: [complete, edit])
+        let configuration = UISwipeActionsConfiguration(actions: [delete, edit])
         return configuration
     }
 

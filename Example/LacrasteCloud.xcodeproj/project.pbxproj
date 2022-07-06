@@ -267,6 +267,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VHG5SDJ6H6;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -536,12 +537,13 @@
 				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
 				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LacrasteCloud-Example.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -553,12 +555,13 @@
 				CODE_SIGN_ENTITLEMENTS = LacrasteCloud_Example.entitlements;
 				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				INFOPLIST_FILE = LacrasteCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.LacrasteCloud-Example.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -566,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE7D994469227D8630B3F6C3 /* Pods-LacrasteCloud_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -588,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0E7D423D9F6EEDBE6575D6B /* Pods-LacrasteCloud_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VHG5SDJ6H6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
