@@ -40,7 +40,7 @@ class MainViewController: UITableViewController {
     }
     
     private func fetchPosts() {
-        Storage.getAll(storageType: .privateStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), { (result: Result<[Post], Error>) in
+        Storage.getAll(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), { (result: Result<[Post], Error>) in
             switch result {
             case .success(let posts):
                 self.posts = posts
@@ -57,7 +57,7 @@ class MainViewController: UITableViewController {
     }
     
     private func deletePost(withId id: String) {
-        Storage.remove(storageType: .privateStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), id) { result in
+        Storage.remove(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), id) { result in
             
             switch result {
             case .success(_):

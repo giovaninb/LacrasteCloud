@@ -84,12 +84,12 @@ public struct Storage {
                     
                     var values: [L] = []
                     for record in results {
-                        guard let value = try? L.parser.fromRecord(record) as? L
+                        guard let value = (try? L.parser.fromRecord(record)) as? L
                         else {
                             completion(.failure(StorageErrors.DDCParsingFailure))
                             return
                         }
-                        values.append(value!)
+                        values.append(value)
                     }
                     
                     completion(.success(values))
@@ -128,13 +128,13 @@ public struct Storage {
             
             var values: [L] = []
             for record in results {
-                guard let value = try? L.parser.fromRecord(record) as? L
+                guard let value = (try? L.parser.fromRecord(record)) as? L
                 else {
                     completion(.failure(StorageErrors.DDCParsingFailure))
                     return
                 }
                 
-                values.append(value!)
+                values.append(value)
             }
             
             completion(.success(values))
@@ -165,12 +165,12 @@ public struct Storage {
             
             var values: [L] = []
             for record in result {
-                guard let value = try? L.parser.fromRecord(record) as? L
+                guard let value = (try? L.parser.fromRecord(record)) as? L
                 else {
                     completion(.failure(StorageErrors.DDCParsingFailure))
                     return
                 }
-                values.append(value!)
+                values.append(value)
             }
             
             completion(.success(values))
@@ -189,12 +189,12 @@ public struct Storage {
         
         // As we get each record, lets store them in the array
         queryOperation.recordFetchedBlock = { record in
-            guard let value = try? L.parser.fromRecord(record) as? L
+            guard let value = (try? L.parser.fromRecord(record)) as? L
             else {
                 completionHandler(.failure(StorageErrors.DDCParsingFailure))
                 return
             }
-            listOfRecords.append(value!)
+            listOfRecords.append(value)
         }
         
         // Have another closure for when the download is complete
@@ -217,8 +217,7 @@ public struct Storage {
     public static func get<L: Storable>(storageType: StorageType = .privateStorage(), recordName: String, _ completion: @escaping (Result<L, Error>) -> Void) {
                 
         let recordID = CKRecord.ID(recordName: recordName)
-        storageType.database.fetch(withRecordID: recordID) {
-            result, error in
+        storageType.database.fetch(withRecordID: recordID) { result, error in
             
             if error != nil {
                 completion(.failure(StorageErrors.DDCDataRetrieval))
@@ -231,12 +230,12 @@ public struct Storage {
                 return
             }
             
-            guard let value = try? L.parser.fromRecord(record) as? L
+            guard let value = (try? L.parser.fromRecord(record)) as? L
             else {
                 completion(.failure(StorageErrors.DDCParsingFailure))
                 return
             }
-            completion(.success(value!))
+            completion(.success(value))
         }
     }
     
@@ -265,13 +264,13 @@ public struct Storage {
                 return
             }
             
-            guard let value = try? L.parser.fromRecord(savedRecord) as? L
+            guard let value = (try? L.parser.fromRecord(savedRecord)) as? L
             else {
                 completion(.failure(StorageErrors.DDCParsingFailure))
                 return
             }
             
-            completion(.success(value!))
+            completion(.success(value))
         }
     }
     
