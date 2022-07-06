@@ -126,9 +126,24 @@ class MainViewController: UITableViewController {
         })
         edit.backgroundColor = UIColor.systemGreen
         
-        let configuration = UISwipeActionsConfiguration(actions: [delete, edit])
+        let configuration = UISwipeActionsConfiguration(actions: [delete])
         return configuration
     }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit", handler: {
+            (action, view, completionHandler) in
+            
+            self.performSegue(withIdentifier: "editPost", sender: self.posts[indexPath.row])
+            
+            completionHandler(true)
+        })
+        edit.backgroundColor = UIColor.systemGreen
+        
+        let configuration = UISwipeActionsConfiguration(actions: [edit])
+        return configuration
+    }
+    
 
 }
 
