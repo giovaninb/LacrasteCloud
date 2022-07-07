@@ -20,6 +20,9 @@
 		80535AE82873716500ACA7AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AE72873716500ACA7AD /* UIViewController+Extensions.swift */; };
 		80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AEA287371C000ACA7AD /* PostViewController.swift */; };
 		80535AEF28737BB200ACA7AD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80535AEE28737BB200ACA7AD /* CloudKit.framework */; };
+		80E33103287775FA00C55963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E33102287775F900C55963 /* LoginViewController.swift */; };
+		80E3310528777C7C00C55963 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3310428777C7C00C55963 /* User.swift */; };
+		80E3310728777CFF00C55963 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3310628777CFF00C55963 /* UserParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		80535AEA287371C000ACA7AD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		80535AED28737BAD00ACA7AD /* LacrasteCloud_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LacrasteCloud_Example.entitlements; sourceTree = "<group>"; };
 		80535AEE28737BB200ACA7AD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		80E33102287775F900C55963 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		80E3310428777C7C00C55963 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		80E3310628777CFF00C55963 /* UserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 		88C020B125D3B86560797733 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A0E7D423D9F6EEDBE6575D6B /* Pods-LacrasteCloud_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LacrasteCloud_Tests.release.xcconfig"; path = "Target Support Files/Pods-LacrasteCloud_Tests/Pods-LacrasteCloud_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D04876755EBC40EBF18FEE20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 			children = (
 				80535AE1287369F300ACA7AD /* Post.swift */,
 				80535AE328736A9D00ACA7AD /* PostParser.swift */,
+				80E3310428777C7C00C55963 /* User.swift */,
+				80E3310628777CFF00C55963 /* UserParser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			children = (
 				607FACD71AFB9204008FA782 /* MainViewController.swift */,
 				80535AEA287371C000ACA7AD /* PostViewController.swift */,
+				80E33102287775F900C55963 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -384,9 +393,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E33103287775FA00C55963 /* LoginViewController.swift in Sources */,
 				80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */,
 				80535AE2287369F300ACA7AD /* Post.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				80E3310728777CFF00C55963 /* UserParser.swift in Sources */,
+				80E3310528777C7C00C55963 /* User.swift in Sources */,
 				80535AE428736A9D00ACA7AD /* PostParser.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				80535AE82873716500ACA7AD /* UIViewController+Extensions.swift in Sources */,

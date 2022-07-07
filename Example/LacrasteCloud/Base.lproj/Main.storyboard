@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="efO-TI-4C2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zb1-K1-os5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,7 +80,7 @@
         <!--Lacraste-->
         <scene sceneID="82o-nW-qng">
             <objects>
-                <tableViewController id="kgQ-fv-rmL" customClass="MainViewController" customModule="LacrasteCloud_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainViewController" id="kgQ-fv-rmL" customClass="MainViewController" customModule="LacrasteCloud_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="311-Tj-NWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,11 +115,92 @@
             </objects>
             <point key="canvasLocation" x="1125" y="133"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="SDe-E3-hL1">
+            <objects>
+                <viewController id="Zb1-K1-os5" customClass="LoginViewController" customModule="LacrasteCloud_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Wu-bW-8LH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsK-c0-p7c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nVM-dJ-7PO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF1-Fp-hPE">
+                                <rect key="frame" x="35" y="69" width="344" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ygq-xg-lCG">
+                                <rect key="frame" x="182.5" y="419.5" width="49" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-Q4-bSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwB-Af-BJu">
+                                        <rect key="frame" x="0.0" y="36.5" width="49" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gM-ZL-suz">
+                                <rect key="frame" x="40" y="503" width="334" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="applelogo" catalog="system" title="Sign in with Apple"/>
+                                <connections>
+                                    <action selector="handleAuthorizationAppleIDButtonPress:" destination="Zb1-K1-os5" eventType="touchUpInside" id="zGF-9k-jks"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSs-Q8-zfq">
+                                <rect key="frame" x="40" y="549" width="334" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Enter as Guest"/>
+                                <connections>
+                                    <action selector="guestUser:" destination="Zb1-K1-os5" eventType="touchUpInside" id="o7j-Rs-qhQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZSs-Q8-zfq" secondAttribute="trailing" constant="20" id="51y-A4-0Ba"/>
+                            <constraint firstItem="ygq-xg-lCG" firstAttribute="centerY" secondItem="nVM-dJ-7PO" secondAttribute="centerY" id="CGF-iv-QQ1"/>
+                            <constraint firstItem="ygq-xg-lCG" firstAttribute="centerX" secondItem="nVM-dJ-7PO" secondAttribute="centerX" id="Caf-CU-jxL"/>
+                            <constraint firstItem="oF1-Fp-hPE" firstAttribute="leading" secondItem="nVM-dJ-7PO" secondAttribute="leadingMargin" constant="15" id="Hu2-R9-CxP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oF1-Fp-hPE" secondAttribute="trailing" constant="15" id="KrY-6r-8Bx"/>
+                            <constraint firstItem="ZSs-Q8-zfq" firstAttribute="leading" secondItem="nVM-dJ-7PO" secondAttribute="leadingMargin" constant="20" id="MKu-6Z-HB2"/>
+                            <constraint firstItem="0gM-ZL-suz" firstAttribute="top" secondItem="ygq-xg-lCG" secondAttribute="bottom" constant="26.5" id="ZBE-aq-qmX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0gM-ZL-suz" secondAttribute="trailing" constant="20" id="c0E-Wc-TVz"/>
+                            <constraint firstItem="oF1-Fp-hPE" firstAttribute="top" secondItem="3Wu-bW-8LH" secondAttribute="bottom" constant="25" id="cRa-qH-XGt"/>
+                            <constraint firstItem="0gM-ZL-suz" firstAttribute="leading" secondItem="nVM-dJ-7PO" secondAttribute="leadingMargin" constant="20" id="kTK-a6-oWa"/>
+                            <constraint firstItem="ZSs-Q8-zfq" firstAttribute="top" secondItem="0gM-ZL-suz" secondAttribute="bottom" constant="15" id="lvu-eb-H4G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblError" destination="IwB-Af-BJu" id="CRs-bJ-jBX"/>
+                        <outlet property="lblStatus" destination="LTc-Q4-bSR" id="bw1-pQ-qeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzO-ii-v7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="133"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="97H-tE-NdO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flv-mr-acz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efO-TI-4C2" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="CZp-Is-StF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oaM-OT-UI8">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -130,7 +210,6 @@
                         <segue destination="kgQ-fv-rmL" kind="relationship" relationship="rootViewController" id="qhH-nB-8JP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Flv-mr-acz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
@@ -139,6 +218,7 @@
         <segue reference="1s4-bW-tfO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

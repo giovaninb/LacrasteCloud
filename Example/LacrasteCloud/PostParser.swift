@@ -13,13 +13,13 @@ import LacrasteCloud
 class PostParser: Parser {
     
     func fromRecord(_ record: CKRecord) throws -> Storable {
-        let nameRecord = record.recordID.recordName
+        let recordName = record.recordID.recordName
         
         guard let name = record["name"] as? String,
               let simpleDescription = record["simpleDescription"] as? String
         else { throw ParsingError.DDCParsingError }
         
-        let post = Post(recordName: nameRecord, name: name, simpleDescription: simpleDescription)
+        let post = Post(recordName: recordName, name: name, simpleDescription: simpleDescription)
         return post
     }
     
