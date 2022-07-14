@@ -1,5 +1,5 @@
 //
-//  StorageErrors.swift
+//  LacrasteErrors.swift
 //  LacrasteCloud
 //
 //  Created by Giovani Nícolas Bettoni on 20/06/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum StorageErrors: LocalizedError {
+public enum LacrasteErrors: LocalizedError {
         
     case DDCDataRetrieval
     case DDCDataInsertion

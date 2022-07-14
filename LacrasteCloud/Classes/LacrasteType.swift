@@ -1,5 +1,5 @@
 //
-//  StorageType.swift
+//  LacrasteType.swift
 //  LacrasteCloud
 //
 //  Created by Giovani Nícolas Bettoni on 20/06/22.
@@ -7,7 +7,7 @@
 
 import CloudKit
 
-public enum StorageType {
+public enum LacrasteType {
     case publicStorage(customContainer: String? = nil)
     case privateStorage(customContainer: String? = nil)
     

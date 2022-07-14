@@ -8,8 +8,8 @@
 import CloudKit
 
 public protocol Parser {
-    func fromRecord(_ record: CKRecord) throws -> Storable
-    func toRecord(_ storable: Storable) throws -> CKRecord
+    func fromRecord(_ record: CKRecord) throws -> LacrasteStorage
+    func toRecord(_ storable: LacrasteStorage) throws -> CKRecord
 }
 
 public enum ParsingError: Error { case DDCParsingError }

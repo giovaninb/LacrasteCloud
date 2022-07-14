@@ -7,7 +7,7 @@
 
 import CloudKit
 
-public protocol Storable {
+public protocol LacrasteStorage {
     
     static var reference: String { get }
     static var parser: Parser { get }

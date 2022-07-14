@@ -12,7 +12,7 @@ import LacrasteCloud
 
 class PostParser: Parser {
     
-    func fromRecord(_ record: CKRecord) throws -> Storable {
+    func fromRecord(_ record: CKRecord) throws -> LacrasteStorage {
         let recordName = record.recordID.recordName
         
         guard let name = record["name"] as? String,
@@ -23,11 +23,11 @@ class PostParser: Parser {
         return post
     }
     
-    func toRecord(_ storable: Storable) throws -> CKRecord {
+    func toRecord(_ storable: LacrasteStorage) throws -> CKRecord {
         guard let post = storable as? Post
         else { throw ParsingError.DDCParsingError }
         
-        let record = Storage.record(from: post)
+        let record = Lacraste.record(from: post)
         record.setValue(post.name, forKey: "name")
         record.setValue(post.simpleDescription, forKey: "simpleDescription")
         return record

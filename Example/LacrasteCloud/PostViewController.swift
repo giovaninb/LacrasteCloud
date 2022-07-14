@@ -36,7 +36,7 @@ class PostViewController: UIViewController {
         let newPost = Post(name: name, simpleDescription: description)
         
         saveActivityIndicator.isHidden = false
-        Storage.create(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), newPost)  { result in
+        Lacraste.create(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), newPost)  { result in
             DispatchQueue.main.async {
                 self.saveActivityIndicator.isHidden = true
             }
@@ -58,7 +58,7 @@ class PostViewController: UIViewController {
         postToUpdate.simpleDescription = description
         
         saveActivityIndicator.isHidden = false
-        Storage.update(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), postToUpdate) { result in
+        Lacraste.update(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), postToUpdate) { result in
             DispatchQueue.main.async {
                 self.saveActivityIndicator.isHidden = true
             }

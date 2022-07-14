@@ -11,18 +11,18 @@ import CloudKit
 import LacrasteCloud
 
 class UserParser: Parser {
-    func fromRecord(_ record: CKRecord) throws -> Storable {
+    func fromRecord(_ record: CKRecord) throws -> LacrasteStorage {
         let recordName = record.recordID.recordName
         
         let user = User(recordName: recordName)
         return user
     }
     
-    func toRecord(_ storable: Storable) throws -> CKRecord {
+    func toRecord(_ storable: LacrasteStorage) throws -> CKRecord {
         guard let user = storable as? User
         else { throw ParsingError.DDCParsingError }
         
-        let record = Storage.record(from: user)
+        let record = Lacraste.record(from: user)
         return record
     }
     

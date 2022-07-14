@@ -1,5 +1,5 @@
 //
-//  Storage.swift
+//  Lacraste.swift
 //  LacrasteCloud
 //
 //  Created by Giovani Nícolas Bettoni on 21/06/22.
@@ -8,7 +8,7 @@
 import Foundation
 import CloudKit
 
-public struct Storage {
+public struct Lacraste {
     
     /// Returns an CKRecordID for the given recordName
     /// - Parameter completion: Result object containing the user icloud ID or an error
@@ -16,16 +16,16 @@ public struct Storage {
         return CKRecord.ID(recordName: recordName)
     }
     
-    /// Returns a record for the passing Storable object. If the objects has a recordName, it will be preserved.
-    /// - Parameter storable: Result CKRecord object from the Storable Object
-    public static func record<L: Storable>(from storable: L) -> CKRecord {
+    /// Returns a record for the passing Storage object. If the objects has a recordName, it will be preserved.
+    /// - Parameter storage: Result CKRecord object from the Storage Object
+    public static func record<T: LacrasteStorage>(from storage: T) -> CKRecord {
         
         let record: CKRecord
         
-        if let recordName = storable.recordName {
-            record = CKRecord(recordType: L.reference, recordID: CKRecord.ID(recordName: recordName))
+        if let recordName = storage.recordName {
+            record = CKRecord(recordType: T.reference, recordID: CKRecord.ID(recordName: recordName))
         } else {
-            record = CKRecord(recordType: L.reference)
+            record = CKRecord(recordType: T.reference)
         }
         return record
     }
@@ -41,12 +41,12 @@ public struct Storage {
         container.fetchUserRecordID { (result, error) in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.DDCDataRetrieval))
                 return
             }
             
             guard let result = result else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
@@ -59,13 +59,13 @@ public struct Storage {
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
-    public static func fetchRecordsByUser<L: Storable>(storageType: StorageType = .privateStorage(), _ completion: @escaping (Result<[L], Error>) -> Void) {
+    public static func fetchRecordsByUser<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ completion: @escaping (Result<[T], Error>) -> Void) {
         
         getUserRecordID(customContainer: storageType.container) { (result) in
             switch result {
             case .success(let recordID):
                 let query = CKQuery(
-                    recordType: L.reference,
+                    recordType: T.reference,
                     predicate: NSPredicate(format: "creatorUserRecordID == %@", recordID)
                 )
                 
@@ -73,20 +73,20 @@ public struct Storage {
                     results, error in
                     
                     if error != nil {
-                        completion(.failure(StorageErrors.DDCDataRetrieval))
+                        completion(.failure(LacrasteErrors.DDCDataRetrieval))
                         return
                     }
                     
                     guard let results = results else {
-                        completion(.failure(StorageErrors.DDCNullReturn))
+                        completion(.failure(LacrasteErrors.DDCNullReturn))
                         return
                     }
                     
-                    var values: [L] = []
+                    var values: [T] = []
                     for record in results {
-                        guard let value = (try? L.parser.fromRecord(record)) as? L
+                        guard let value = (try? T.parser.fromRecord(record)) as? T
                         else {
-                            completion(.failure(StorageErrors.DDCParsingFailure))
+                            completion(.failure(LacrasteErrors.DDCParsingFailure))
                             return
                         }
                         values.append(value)
@@ -106,10 +106,10 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
     ///   - predicate: Predicate string
-    public static func get<L: Storable>(storageType: StorageType = .privateStorage(), predicate: NSPredicate,  _ completion: @escaping (Result<[L], Error>) -> Void) {
+    public static func get<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), predicate: NSPredicate,  _ completion: @escaping (Result<[T], Error>) -> Void) {
         
         let query = CKQuery(
-            recordType: L.reference,
+            recordType: T.reference,
             predicate: predicate
         )
         
@@ -117,20 +117,20 @@ public struct Storage {
             results, error in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.DDCDataRetrieval))
                 return
             }
             
             guard let results = results else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
-            var values: [L] = []
+            var values: [T] = []
             for record in results {
-                guard let value = (try? L.parser.fromRecord(record)) as? L
+                guard let value = (try? T.parser.fromRecord(record)) as? T
                 else {
-                    completion(.failure(StorageErrors.DDCParsingFailure))
+                    completion(.failure(LacrasteErrors.DDCParsingFailure))
                     return
                 }
                 
@@ -145,29 +145,29 @@ public struct Storage {
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
-    public static func getAll<L: Storable>(storageType: StorageType = .privateStorage(), _ completion: @escaping (Result<[L], Error>) -> Void) {
+    public static func getAll<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ completion: @escaping (Result<[T], Error>) -> Void) {
         
-        let query = CKQuery(recordType: L.reference, predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: T.reference, predicate: NSPredicate(value: true))
         
         storageType.database.perform(query, inZoneWith: nil) { results, error in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.DDCDataRetrieval))
                 return
             }
             
             guard let result = results
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
             
-            var values: [L] = []
+            var values: [T] = []
             for record in result {
-                guard let value = (try? L.parser.fromRecord(record)) as? L
+                guard let value = (try? T.parser.fromRecord(record)) as? T
                 else {
-                    completion(.failure(StorageErrors.DDCParsingFailure))
+                    completion(.failure(LacrasteErrors.DDCParsingFailure))
                     return
                 }
                 values.append(value)
@@ -181,17 +181,17 @@ public struct Storage {
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
-    public static func getAllWithoutLimit<L: Storable>(storageType: StorageType = .privateStorage(), _ completionHandler: @escaping (Result<[L], Error>) -> Void) {
-        var listOfRecords: [L] = [] // A place to store the items as we get them
+    public static func getAllWithoutLimit<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ completionHandler: @escaping (Result<[T], Error>) -> Void) {
+        var listOfRecords: [T] = [] // A place to store the items as we get them
         
-        let query = CKQuery(recordType: L.reference, predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: T.reference, predicate: NSPredicate(value: true))
         let queryOperation = CKQueryOperation(query: query)
         
         // As we get each record, lets store them in the array
         queryOperation.recordFetchedBlock = { record in
-            guard let value = (try? L.parser.fromRecord(record)) as? L
+            guard let value = (try? T.parser.fromRecord(record)) as? T
             else {
-                completionHandler(.failure(StorageErrors.DDCParsingFailure))
+                completionHandler(.failure(LacrasteErrors.DDCParsingFailure))
                 return
             }
             listOfRecords.append(value)
@@ -200,7 +200,7 @@ public struct Storage {
         // Have another closure for when the download is complete
         queryOperation.queryCompletionBlock = { cursor, error in
             if error != nil {
-                completionHandler(.failure(StorageErrors.DDCDataRetrieval))
+                completionHandler(.failure(LacrasteErrors.DDCDataRetrieval))
             } else {
                 completionHandler(.success(listOfRecords))
             }
@@ -214,25 +214,25 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - recordID: The UUID of the record in the database
     ///   - completion: Result object containing the fetched record or an error
-    public static func get<L: Storable>(storageType: StorageType = .privateStorage(), recordName: String, _ completion: @escaping (Result<L, Error>) -> Void) {
+    public static func get<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), recordName: String, _ completion: @escaping (Result<T, Error>) -> Void) {
                 
         let recordID = CKRecord.ID(recordName: recordName)
         storageType.database.fetch(withRecordID: recordID) { result, error in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.DDCDataRetrieval))
                 return
             }
             
             guard let record = result
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
-            guard let value = (try? L.parser.fromRecord(record)) as? L
+            guard let value = (try? T.parser.fromRecord(record)) as? T
             else {
-                completion(.failure(StorageErrors.DDCParsingFailure))
+                completion(.failure(LacrasteErrors.DDCParsingFailure))
                 return
             }
             completion(.success(value))
@@ -242,31 +242,31 @@ public struct Storage {
     /// Create a record in the database
     /// - Parameters:
     ///   - storageType: Which database to perform the query
-    ///   - storable: The Storable object to  e inserted
+    ///   - storage: The Storage object to  e inserted
     ///   - completion: Result object containing the created record  or an error
-    public static func create<L: Storable>(storageType: StorageType = .privateStorage(), _ storable: L, _  completion: @escaping (Result<L, Error>) -> Void) {
+    public static func create<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ storage: T, _  completion: @escaping (Result<T, Error>) -> Void) {
         
-        guard let record = try? L.parser.toRecord(storable)
+        guard let record = try? T.parser.toRecord(storage)
         else {
-            return completion(.failure(StorageErrors.DDCParsingFailure))
+            return completion(.failure(LacrasteErrors.DDCParsingFailure))
         }
                 
         storageType.database.save(record) { (savedRecord, error) in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataInsertion))
+                completion(.failure(LacrasteErrors.DDCDataInsertion))
                 return
             }
             
             guard let savedRecord = savedRecord
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
-            guard let value = (try? L.parser.fromRecord(savedRecord)) as? L
+            guard let value = (try? T.parser.fromRecord(savedRecord)) as? T
             else {
-                completion(.failure(StorageErrors.DDCParsingFailure))
+                completion(.failure(LacrasteErrors.DDCParsingFailure))
                 return
             }
             
@@ -277,13 +277,13 @@ public struct Storage {
     /// Updates a record in the database
     /// - Parameters:
     ///   - storageType: Which database to perform the query
-    ///   - storable: The Storable object to  e updated
+    ///   - storage: The Storage object to  e updated
     ///   - completion: Result object containing the updated record or an error
-    public static func update<L: Storable>(storageType: StorageType = .privateStorage(), _ storable: L, _  completion: @escaping (Result<String, Error>) -> Void) {
+    public static func update<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ storage: T, _  completion: @escaping (Result<String, Error>) -> Void) {
         
-        guard let record = try? L.parser.toRecord(storable)
+        guard let record = try? T.parser.toRecord(storage)
         else {
-            completion(.failure(StorageErrors.DDCParsingFailure))
+            completion(.failure(LacrasteErrors.DDCParsingFailure))
             return
         }
                 
@@ -293,13 +293,13 @@ public struct Storage {
         operation.modifyRecordsCompletionBlock = { (updatedRecords, _, error) in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataUpdate))
+                completion(.failure(LacrasteErrors.DDCDataUpdate))
                 return
             }
             
             guard let recordName = updatedRecords?.first?.recordID.recordName
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
@@ -314,19 +314,19 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - recordID: The UUID of the record in the database
     ///   - completion: Result object the deleted record ID or an error
-    public static func remove(storageType: StorageType = .privateStorage(), _ recordName: String, completion: @escaping (Result<String, Error>) -> Void) {
+    public static func remove(storageType: LacrasteType = .privateStorage(), _ recordName: String, completion: @escaping (Result<String, Error>) -> Void) {
                 
         let recordID = CKRecord.ID(recordName: recordName)
         storageType.database.delete(withRecordID: recordID) { (recordID, error) in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRemoval))
+                completion(.failure(LacrasteErrors.DDCDataRemoval))
                 return
             }
             
             guard let recordID = recordID
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             completion(.success(recordID.recordName))
@@ -338,7 +338,7 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - recordIDs: The UUID's in the database
     ///   - completion: Result object the deleted record ID's or an error
-    public static func remove(storageType: StorageType = .privateStorage(), _ recordNames: [String], completion: @escaping (Result<[String], Error>) -> Void) {
+    public static func remove(storageType: LacrasteType = .privateStorage(), _ recordNames: [String], completion: @escaping (Result<[String], Error>) -> Void) {
         
         let recordIDs = recordNames.map({ CKRecord.ID(recordName: $0) })
         let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: recordIDs)
@@ -346,13 +346,13 @@ public struct Storage {
         operation.modifyRecordsCompletionBlock = { (_, deletedRecordIDs, error) in
             
             if error != nil {
-                completion(.failure(StorageErrors.DDCDataRemoval))
+                completion(.failure(LacrasteErrors.DDCDataRemoval))
                 return
             }
             
             guard let recordIDs = deletedRecordIDs
             else {
-                completion(.failure(StorageErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.DDCNullReturn))
                 return
             }
             
@@ -367,16 +367,16 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - type: The type of the record
     ///   - completion: Result object the deleted record ID's or an error
-    public static func removeAll<L: Storable>(storageType: StorageType = .privateStorage(), type: L.Type, completion: @escaping (Result<[String], Error>) -> Void) {
+    public static func removeAll<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), type: T.Type, completion: @escaping (Result<[String], Error>) -> Void) {
         
-        getAll(storageType: storageType) { (result: Result<[L], Error>) in
+        getAll(storageType: storageType) { (result: Result<[T], Error>) in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(StorageErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.DDCNullRecord))
                     return
                 }
                                 
@@ -397,16 +397,16 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - type: The type of the record
     ///   - completion: Result object the deleted record ID's or an error
-    public static func removeAllbyUser<L: Storable>(storageType: StorageType = .privateStorage(), type: L.Type, completion: @escaping (Result<[String], Error>) -> Void) {
+    public static func removeAllbyUser<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), type: T.Type, completion: @escaping (Result<[String], Error>) -> Void) {
         
-        fetchRecordsByUser(storageType: storageType) { (result: Result<[L], Error>) in
+        fetchRecordsByUser(storageType: storageType) { (result: Result<[T], Error>) in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(StorageErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.DDCNullRecord))
                     return
                 }
                                 
@@ -427,10 +427,10 @@ public struct Storage {
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all deleted record ID's or an error
     ///   - predicate: Predicate string
-    public static func remove<L: Storable>(storageType: StorageType = .privateStorage(), type: L.Type, predicate: NSPredicate,  _ completion: @escaping (Result<[String], Error>) -> Void) {
+    public static func remove<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), type: T.Type, predicate: NSPredicate,  _ completion: @escaping (Result<[String], Error>) -> Void) {
         
-        Storage.get(storageType: storageType, predicate: predicate) {
-            (result: Result<[L], Error>) in
+        Lacraste.get(storageType: storageType, predicate: predicate) {
+            (result: Result<[T], Error>) in
             
             switch result {
             case.failure(let error):
@@ -438,7 +438,7 @@ public struct Storage {
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(StorageErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.DDCNullRecord))
                     return
                 }
                                 

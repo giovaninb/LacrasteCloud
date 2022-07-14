@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 import LacrasteCloud
 
-struct Post: Storable {
+struct Post: LacrasteStorage {
     
     /// Static attributes
     static var reference: String = "Post"

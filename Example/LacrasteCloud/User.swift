@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 import LacrasteCloud
 
-struct User: Storable {
+struct User: LacrasteStorage {
     
     static var reference: String = "User"
     static var parser: Parser = UserParser()
