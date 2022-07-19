@@ -33,10 +33,20 @@ class PostViewController: UIViewController {
     }
     
     private func createPost(name: String, description: String?) {
-        let newPost = Post(name: name, simpleDescription: description)
+        //let newPost = Post(name: name, simpleDescription: description)
+        
+        guard
+            let image = UIImage(named: "crocodile"),
+            let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("crocodile.png"),
+            let data = image.pngData()
+        else { return }
+
+        try? data.write(to: url)
+        let asset = CKAsset(fileURL: url)
+        let newPost = Post(name: name, simpleDescription: description, image: asset)
         
         saveActivityIndicator.isHidden = false
-        Lacraste.create(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), newPost)  { result in
+        Lacraste.create(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), newPost) { result in
             DispatchQueue.main.async {
                 self.saveActivityIndicator.isHidden = true
             }

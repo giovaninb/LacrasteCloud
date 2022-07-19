@@ -4,7 +4,8 @@ platform :ios, '9.0'
 
 target 'LacrasteCloud_Example' do
   pod 'LacrasteCloud', :path => '../'
-
+  pod 'Kingfisher'
+  
   target 'LacrasteCloud_Tests' do
     inherit! :search_paths
 

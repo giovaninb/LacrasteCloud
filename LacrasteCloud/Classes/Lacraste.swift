@@ -55,7 +55,7 @@ public struct Lacraste {
         }
     }
     
-    /// Fetch all records of L owned by current user
+    /// Fetch all records of T owned by current user
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
@@ -250,7 +250,7 @@ public struct Lacraste {
         else {
             return completion(.failure(LacrasteErrors.DDCParsingFailure))
         }
-                
+
         storageType.database.save(record) { (savedRecord, error) in
             
             if error != nil {

@@ -7,36 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BA3924DAFC357C83FC7E56674DA29E1 /* Pods-LacrasteCloud_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */; };
+		1797EBF229ACA3B7F45CC2A602D7CA16 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */; };
+		19698657F3D074A34B5057BE5294980D /* Lacraste.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EB3EB3DE336D2A4B6296084E6A48E /* Lacraste.swift */; };
+		1AEF9993254E6DC249784BC73E1F3E0B /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */; };
+		227D467BBA344D4B0E7E4EF8CA254D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		25D230001F255507FE4EC823127F1537 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */; };
+		26DC5CF5D24D83CA4FAF26FEEDEC22B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */; };
+		39B7ADBBE2DA828B62636B288AB49D7F /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */; };
+		3EDF29877CC90C227BBF974F9DE982B9 /* LacrasteErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA01C6AD2CAB1F563B7F143685BB5D /* LacrasteErrors.swift */; };
+		4818DEE41403E664888FD960E540DB90 /* LacrasteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49C1A7733B5F1CE831A741B4FAC11A /* LacrasteStorage.swift */; };
+		4934CA02086672D3B39EDBFF4FBF8210 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */; };
+		4BECAF3CB00D9C3D9672413C29C6BF33 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */; };
+		5C1F47F00C0D84E9D56405A44781C4C4 /* Pods-LacrasteCloud_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */; };
+		5D6CA58EF1C05DC7B4470FAEFCBDE398 /* LacrasteCloud-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860A834DBC5294806E9F697D56964EF4 /* LacrasteCloud-dummy.m */; };
+		60C639BAF932A36DDF221240B4512423 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */; };
+		63C3687AE4812889B8A93CDEBB448C95 /* LacrasteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A823A370AB47086371E23EC985F25E /* LacrasteType.swift */; };
+		6681AF1FD538F4733A925E42BD4412B6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */; };
 		7770147384527F17DB5208E8EB31308C /* Pods-LacrasteCloud_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1232495165133C5EAB9559804F0F09 /* Pods-LacrasteCloud_Tests-dummy.m */; };
-		80535AD62864CF3E00ACA7AD /* Lacraste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD52864CF3E00ACA7AD /* Lacraste.swift */; };
-		80535AD82864CF9300ACA7AD /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD72864CF9300ACA7AD /* Parser.swift */; };
-		80535ADA2864CFBE00ACA7AD /* LacrasteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AD92864CFBE00ACA7AD /* LacrasteStorage.swift */; };
-		80535ADC2864CFEE00ACA7AD /* LacrasteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535ADB2864CFEE00ACA7AD /* LacrasteType.swift */; };
-		80535ADE2864D04800ACA7AD /* LacrasteErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535ADD2864D04800ACA7AD /* LacrasteErrors.swift */; };
-		8E9EFC88E0D1D9E1B29D7B87DDA1B927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		B1B53F8E3E0C81660F50FEFCDF00588A /* Pods-LacrasteCloud_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4276E648446C1D97826A5A26BC9701C /* LacrasteCloud-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C46F688321BAA0058140FA70217DE73E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		79BBEAD0B14A4DB41D71928EA4C34A46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		8327B7A541C1348BB74B42E0322152F6 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */; };
+		83D2000349CA225B1585EE55CA777E61 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */; };
+		87E662D163C07295C9C3EF3D36CC240E /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */; };
+		8826398DD36B6378A4323BC6A6498D67 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */; };
+		8B7C8723049D635F9391828449049500 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */; };
+		8E9EFC88E0D1D9E1B29D7B87DDA1B927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		9CE08424110ACCA861A56CF7FA163D21 /* LacrasteCloud-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 143158C6433BFC652BDD4937C8F16CAF /* LacrasteCloud-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A03B25361040CCD3494AD95A7A283038 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B82B42DE5C884C785ED414851628B /* Image.swift */; };
+		A8002EBBA54C95636E53BE9B2E7521ED /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B56E401B350AE5A67F858DE994A30A75 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C6B3AEF1EBD4723A68590A11BCF4 /* Parser.swift */; };
+		B67841A78D0F0691BF81A2EB2D5E6FFB /* Pods-LacrasteCloud_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71899220FE4B4393618C22F64EDF1BA /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */; };
+		B81E66D2E50F259201580FB73AE5B053 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */; };
+		C07CD77A27192E173EE9ACECA10D12C6 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */; };
+		CB965FB1926761BA3F7FDB8CB83DD5BD /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */; };
+		CD076312FBCFADF5A5D3A7B825143174 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */; };
+		CD4823161DBD529C7BFF79AE9EA2E033 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */; };
 		CE1266A79A5353224E62B45C0D86A18F /* Pods-LacrasteCloud_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6BACF30CD4BDB9AF69CBAD57984687 /* Pods-LacrasteCloud_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1BDD00990BF4B8DE264A66693FCE8BD /* LacrasteCloud-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */; };
-		EBAEE2864F6818769568267A670275F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CE7A8585FF9119A93FFEF4BF3F55FF74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		DAB1D67788D9BEBCC3157B3E3FB4F00E /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */; };
+		DE5EA0F561515BE3A08EF4E61AA0D669 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */; };
+		E682D48021700A0CB14CFBB312E908B0 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */; };
+		EAC88BBDD1750FBF4D82622EDE019D73 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 23065A8661147711B7550F85B0445C48 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F94823179D8879708330D21501EF7FA5 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4382D1CD1FA5815FD3DDD46CEAE0724B /* PBXContainerItemProxy */ = {
+		14384B3C40045837821248A7C6052500 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CDE8469C8A02A7EFDF94EC4C022456AB;
 			remoteInfo = LacrasteCloud;
 		};
-		8D456C6912773A602BD0EBEFE0F03FC0 /* PBXContainerItemProxy */ = {
+		509A8C8D6F1E7698056C7476283B4F48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 39B026F7FDDAA722D8FF002F08879350;
 			remoteInfo = "Pods-LacrasteCloud_Example";
+		};
+		FFDABD9BF974643657A2A224852A98D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -44,56 +79,98 @@
 		00F4D89A90EC027CE7B2CBDF8DAFD027 /* Pods-LacrasteCloud_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LacrasteCloud_Example-umbrella.h"; sourceTree = "<group>"; };
 		07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LacrasteCloud_Example"; path = Pods_LacrasteCloud_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7E15AABCBC67FB760D6DC2BCB25238 /* Pods-LacrasteCloud_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LacrasteCloud_Example-frameworks.sh"; sourceTree = "<group>"; };
+		13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		143158C6433BFC652BDD4937C8F16CAF /* LacrasteCloud-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-umbrella.h"; sourceTree = "<group>"; };
+		1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
+		1D60A389B5297A74C30E0099D2302099 /* LacrasteCloud.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LacrasteCloud.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1E5B2F0CCCDD61887292FF4ED7975430 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
+		23065A8661147711B7550F85B0445C48 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		2A9E6A5470D0E5B55F8E2CCBCEB69FBA /* Pods-LacrasteCloud_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3355A3E99F3CAF5688C905DAADFA75C9 /* Pods-LacrasteCloud_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Example-Info.plist"; sourceTree = "<group>"; };
 		34622891005E7EF56B8977FC17C471C5 /* Pods-LacrasteCloud_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LacrasteCloud_Tests.modulemap"; sourceTree = "<group>"; };
-		4AD1708347EF2DD36910F59950315E2B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		39F4C6B3AEF1EBD4723A68590A11BCF4 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = LacrasteCloud/Classes/Parser.swift; sourceTree = "<group>"; };
+		3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		44C38BAB57C5AC0A8DAD9AAF1337FE7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
 		60140B345B0B0C67C9994A7293A66CA4 /* Pods-LacrasteCloud_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LacrasteCloud_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.release.xcconfig; sourceTree = "<group>"; };
-		6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-umbrella.h"; sourceTree = "<group>"; };
-		6EEB2EA217BC7524F41FC3478E175030 /* LacrasteCloud-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LacrasteCloud-Info.plist"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		80535AD52864CF3E00ACA7AD /* Lacraste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lacraste.swift; path = LacrasteCloud/Classes/Lacraste.swift; sourceTree = "<group>"; };
-		80535AD72864CF9300ACA7AD /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = LacrasteCloud/Classes/Parser.swift; sourceTree = "<group>"; };
-		80535AD92864CFBE00ACA7AD /* LacrasteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LacrasteStorage.swift; path = LacrasteCloud/Classes/LacrasteStorage.swift; sourceTree = "<group>"; };
-		80535ADB2864CFEE00ACA7AD /* LacrasteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LacrasteType.swift; path = LacrasteCloud/Classes/LacrasteType.swift; sourceTree = "<group>"; };
-		80535ADD2864D04800ACA7AD /* LacrasteErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LacrasteErrors.swift; path = LacrasteCloud/Classes/LacrasteErrors.swift; sourceTree = "<group>"; };
-		8AB6713412E8D3F08B74C44A2548F4EC /* LacrasteCloud-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-prefix.pch"; sourceTree = "<group>"; };
+		60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
+		732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		767DFFE22879851519CF63F2FB40F775 /* LacrasteCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.debug.xcconfig; sourceTree = "<group>"; };
+		7DCA01C6AD2CAB1F563B7F143685BB5D /* LacrasteErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LacrasteErrors.swift; path = LacrasteCloud/Classes/LacrasteErrors.swift; sourceTree = "<group>"; };
+		7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
+		853B82B42DE5C884C785ED414851628B /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		860A834DBC5294806E9F697D56964EF4 /* LacrasteCloud-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LacrasteCloud-dummy.m"; sourceTree = "<group>"; };
+		8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		8E1232495165133C5EAB9559804F0F09 /* Pods-LacrasteCloud_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LacrasteCloud_Tests-dummy.m"; sourceTree = "<group>"; };
 		9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Example.release.xcconfig"; sourceTree = "<group>"; };
 		92B6787F2DD0A13E42D60A537CA3CB4D /* Pods-LacrasteCloud_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A7123C3C70A301EF40CC21ADDAA48F49 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LacrasteCloud-dummy.m"; sourceTree = "<group>"; };
-		B0D81580C9341BADFBB3FDEC5872725B /* LacrasteCloud.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LacrasteCloud.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		92BC2EAC27D0E23937E938C762031B5B /* LacrasteCloud-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LacrasteCloud-prefix.pch"; sourceTree = "<group>"; };
+		9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
+		9ADD60A29B7F34D0A45E87BB60F09A9A /* LacrasteCloud-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LacrasteCloud-Info.plist"; sourceTree = "<group>"; };
+		9D0E00E7FDE519D90AD3106399EAD500 /* LacrasteCloud.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LacrasteCloud.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD5907D36A82BB63858970F406FE198 /* LacrasteCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.release.xcconfig; sourceTree = "<group>"; };
+		A3A823A370AB47086371E23EC985F25E /* LacrasteType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LacrasteType.swift; path = LacrasteCloud/Classes/LacrasteType.swift; sourceTree = "<group>"; };
+		A49EB3EB3DE336D2A4B6296084E6A48E /* Lacraste.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lacraste.swift; path = LacrasteCloud/Classes/Lacraste.swift; sourceTree = "<group>"; };
+		A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		B40ED9F4FCDBCD35359F8BA2E8B003BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
 		B66515D4E3DB6A15FA4ACF04D5681CD4 /* Pods-LacrasteCloud_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
 		BC6BACF30CD4BDB9AF69CBAD57984687 /* Pods-LacrasteCloud_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LacrasteCloud_Tests-umbrella.h"; sourceTree = "<group>"; };
-		D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LacrasteCloud.debug.xcconfig; sourceTree = "<group>"; };
-		DE446BDAABF7DAE455474EB31A59602A /* LacrasteCloud.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LacrasteCloud.modulemap; sourceTree = "<group>"; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
+		DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		DAC0ACE30B6D7A9DB6D91F45CFE770D0 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LacrasteCloud_Tests"; path = Pods_LacrasteCloud_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6376DC144E7FAD5E35CEDC99DCF8919 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		E6C5068F24F4C23FFD4F56555ACBD31F /* Pods-LacrasteCloud_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Tests-Info.plist"; sourceTree = "<group>"; };
+		E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		E97CC15182447038EB2A8FEBB89A5292 /* Pods-LacrasteCloud_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LacrasteCloud_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
 		ED819EB3C58CCC71E302FAC674034138 /* Pods-LacrasteCloud_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LacrasteCloud_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
 		F6138B06A03E031BC15427B5F9FB28C4 /* Pods-LacrasteCloud_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LacrasteCloud_Example-dummy.m"; sourceTree = "<group>"; };
-		F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LacrasteCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LacrasteCloud; path = LacrasteCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA49C1A7733B5F1CE831A741B4FAC11A /* LacrasteStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LacrasteStorage.swift; path = LacrasteCloud/Classes/LacrasteStorage.swift; sourceTree = "<group>"; };
 		FB2B705847A649CA80669BD81C063193 /* Pods-LacrasteCloud_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LacrasteCloud_Example.modulemap"; sourceTree = "<group>"; };
+		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FE2AB9EA743E8CC924535AA82D07F242 /* Pods-LacrasteCloud_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LacrasteCloud_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20E027D91607AA51FE7E9256BFDFF257 /* Frameworks */ = {
+		29CCFEB00266540AB89323B0A8CAE067 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBAEE2864F6818769568267A670275F3 /* Foundation.framework in Frameworks */,
+				CE7A8585FF9119A93FFEF4BF3F55FF74 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E65E375F0811FD00FC9C3B5AF9B477F /* Frameworks */ = {
+		669182A4126D61FB0AF74E0128D329B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46F688321BAA0058140FA70217DE73E /* Foundation.framework in Frameworks */,
+				79BBEAD0B14A4DB41D71928EA4C34A46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99ED92B216D0FA7F706E8B890A044EAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26DC5CF5D24D83CA4FAF26FEEDEC22B3 /* CFNetwork.framework in Frameworks */,
+				227D467BBA344D4B0E7E4EF8CA254D5F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,42 +185,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B14F9D1BEA13CD70D988F5B1D84B0E8 /* Development Pods */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3CC1673D66F8E1C7E8E76EB21CBFC773 /* LacrasteCloud */,
+				61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */,
 			);
-			name = "Development Pods";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		256DEF2F9F96BE8FDACD585A6F059209 /* Support Files */ = {
+		3DAB32C302C0DA94B1BDB250CA24E738 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE446BDAABF7DAE455474EB31A59602A /* LacrasteCloud.modulemap */,
-				A7F6CD0E61460CD8FC8FD67E576C58B9 /* LacrasteCloud-dummy.m */,
-				6EEB2EA217BC7524F41FC3478E175030 /* LacrasteCloud-Info.plist */,
-				8AB6713412E8D3F08B74C44A2548F4EC /* LacrasteCloud-prefix.pch */,
-				6A2D5D66F5B480390F1C16C62B95EEF1 /* LacrasteCloud-umbrella.h */,
-				D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */,
-				64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */,
+				A51E1003A82CC5F6AC7E9E14D2435221 /* Kingfisher */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LacrasteCloud";
-			sourceTree = "<group>";
-		};
-		3CC1673D66F8E1C7E8E76EB21CBFC773 /* LacrasteCloud */ = {
-			isa = PBXGroup;
-			children = (
-				63629D853D190F1FEC11BDEADD87ABE9 /* Pod */,
-				256DEF2F9F96BE8FDACD585A6F059209 /* Support Files */,
-				80535AD52864CF3E00ACA7AD /* Lacraste.swift */,
-				80535AD72864CF9300ACA7AD /* Parser.swift */,
-				80535AD92864CFBE00ACA7AD /* LacrasteStorage.swift */,
-				80535ADB2864CFEE00ACA7AD /* LacrasteType.swift */,
-				80535ADD2864D04800ACA7AD /* LacrasteErrors.swift */,
-			);
-			name = LacrasteCloud;
-			path = ../..;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		47846BE80C8C0639CE167C2C5A872EB4 /* Pods-LacrasteCloud_Tests */ = {
@@ -162,32 +217,79 @@
 			path = "Target Support Files/Pods-LacrasteCloud_Tests";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		519D3552E6D344994CD4DC782A26B755 /* LacrasteCloud */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				A49EB3EB3DE336D2A4B6296084E6A48E /* Lacraste.swift */,
+				7DCA01C6AD2CAB1F563B7F143685BB5D /* LacrasteErrors.swift */,
+				FA49C1A7733B5F1CE831A741B4FAC11A /* LacrasteStorage.swift */,
+				A3A823A370AB47086371E23EC985F25E /* LacrasteType.swift */,
+				39F4C6B3AEF1EBD4723A68590A11BCF4 /* Parser.swift */,
+				61A7DD1D2CF051B3419A5B7AC802580F /* Pod */,
+				DFB58DA1656C6E3C9824CE9DD80FF1AB /* Support Files */,
 			);
-			name = iOS;
+			name = LacrasteCloud;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		63629D853D190F1FEC11BDEADD87ABE9 /* Pod */ = {
+		61A7DD1D2CF051B3419A5B7AC802580F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				B0D81580C9341BADFBB3FDEC5872725B /* LacrasteCloud.podspec */,
-				4AD1708347EF2DD36910F59950315E2B /* LICENSE */,
-				A7123C3C70A301EF40CC21ADDAA48F49 /* README.md */,
+				1D60A389B5297A74C30E0099D2302099 /* LacrasteCloud.podspec */,
+				44C38BAB57C5AC0A8DAD9AAF1337FE7D /* LICENSE */,
+				B40ED9F4FCDBCD35359F8BA2E8B003BF /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */ = {
+		61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */,
-				07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */,
-				DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */,
+				8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */,
+				FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7872DFC21C5682568AA53D8F82A57615 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				519D3552E6D344994CD4DC782A26B755 /* LacrasteCloud */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A51E1003A82CC5F6AC7E9E14D2435221 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */,
+				EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */,
+				5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */,
+				9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */,
+				13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */,
+				853B82B42DE5C884C785ED414851628B /* Image.swift */,
+				B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */,
+				F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */,
+				B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */,
+				B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */,
+				DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */,
+				A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */,
+				E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */,
+				46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */,
+				23065A8661147711B7550F85B0445C48 /* Kingfisher.h */,
+				68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */,
+				C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */,
+				60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */,
+				CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */,
+				7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */,
+				57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */,
+				66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */,
+				732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */,
+				F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */,
+				ACEA3550F82C1151D17B5C6824F88D18 /* Support Files */,
+			);
+			name = Kingfisher;
+			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 		A5C580DD4CE4582E3E533B198368230A /* Pods-LacrasteCloud_Example */ = {
@@ -207,23 +309,57 @@
 			path = "Target Support Files/Pods-LacrasteCloud_Example";
 			sourceTree = "<group>";
 		};
+		ACEA3550F82C1151D17B5C6824F88D18 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6376DC144E7FAD5E35CEDC99DCF8919 /* Kingfisher.modulemap */,
+				4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */,
+				1E5B2F0CCCDD61887292FF4ED7975430 /* Kingfisher-Info.plist */,
+				DAC0ACE30B6D7A9DB6D91F45CFE770D0 /* Kingfisher-prefix.pch */,
+				A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */,
+				B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */,
+				1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+		BFD0A35D4CF0A0F9652F5BA6C0E02F29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
+				F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud */,
+				07444989834078B7281703DB74B72626 /* Pods-LacrasteCloud_Example */,
+				DEFB681AB408740240849AA84CAB3BE7 /* Pods-LacrasteCloud_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1B14F9D1BEA13CD70D988F5B1D84B0E8 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */,
+				7872DFC21C5682568AA53D8F82A57615 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				3DAB32C302C0DA94B1BDB250CA24E738 /* Pods */,
+				BFD0A35D4CF0A0F9652F5BA6C0E02F29 /* Products */,
 				EBCF743DD2C60265F5E32F4329162657 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		DFB58DA1656C6E3C9824CE9DD80FF1AB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				9D0E00E7FDE519D90AD3106399EAD500 /* LacrasteCloud.modulemap */,
+				860A834DBC5294806E9F697D56964EF4 /* LacrasteCloud-dummy.m */,
+				9ADD60A29B7F34D0A45E87BB60F09A9A /* LacrasteCloud-Info.plist */,
+				92BC2EAC27D0E23937E938C762031B5B /* LacrasteCloud-prefix.pch */,
+				143158C6433BFC652BDD4937C8F16CAF /* LacrasteCloud-umbrella.h */,
+				767DFFE22879851519CF63F2FB40F775 /* LacrasteCloud.debug.xcconfig */,
+				9DD5907D36A82BB63858970F406FE198 /* LacrasteCloud.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LacrasteCloud";
 			sourceTree = "<group>";
 		};
 		EBCF743DD2C60265F5E32F4329162657 /* Targets Support Files */ = {
@@ -238,6 +374,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1F9F83AB0EB6C912F72F9817896AF220 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC88BBDD1750FBF4D82622EDE019D73 /* Kingfisher.h in Headers */,
+				A8002EBBA54C95636E53BE9B2E7521ED /* Kingfisher-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643D046ADE8DD4F8084117E3C91237F2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67841A78D0F0691BF81A2EB2D5E6FFB /* Pods-LacrasteCloud_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68AF76285D76EC6A5D22AB0A3C503B66 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,19 +399,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		856F2387A14DDEAA60DE550BFD474ECC /* Headers */ = {
+		7325F5920193B5CFB714A366FBCD3363 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B53F8E3E0C81660F50FEFCDF00588A /* Pods-LacrasteCloud_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6443382EF4EEBA838F253627DFC141 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4276E648446C1D97826A5A26BC9701C /* LacrasteCloud-umbrella.h in Headers */,
+				9CE08424110ACCA861A56CF7FA163D21 /* LacrasteCloud-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +422,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				AE0FCF82A431B3B4958B68E4CAA3D6EE /* PBXTargetDependency */,
+				5BFBC20145C0699B76B6C3D43E08A9A9 /* PBXTargetDependency */,
 			);
 			name = "Pods-LacrasteCloud_Tests";
 			productName = Pods_LacrasteCloud_Tests;
@@ -286,17 +431,18 @@
 		};
 		39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E520411A101FB5FF4E55A5326A953FDC /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */;
+			buildConfigurationList = 4A965C3AB0DFA90A248E4ECF84B012B0 /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */;
 			buildPhases = (
-				856F2387A14DDEAA60DE550BFD474ECC /* Headers */,
-				62DFEBA9B6FD0929497038276189C3B4 /* Sources */,
-				3E65E375F0811FD00FC9C3B5AF9B477F /* Frameworks */,
-				DE0CCB8D062B39EB6E9A40F35D465BAB /* Resources */,
+				643D046ADE8DD4F8084117E3C91237F2 /* Headers */,
+				5660591C76D36647B1F03D75F30B3AD4 /* Sources */,
+				29CCFEB00266540AB89323B0A8CAE067 /* Frameworks */,
+				E7B7B178B4D30CF4314B7B4F8F8C23E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				92D02A8DC62CDFAE318FC30B960BD166 /* PBXTargetDependency */,
+				FCC12EC3E0248E8663EE07553FF01E20 /* PBXTargetDependency */,
+				F81F706D69326D1BF5B853AC42B15FB4 /* PBXTargetDependency */,
 			);
 			name = "Pods-LacrasteCloud_Example";
 			productName = Pods_LacrasteCloud_Example;
@@ -305,12 +451,12 @@
 		};
 		CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BCDD6816E4687E576EBC9FB23044B50 /* Build configuration list for PBXNativeTarget "LacrasteCloud" */;
+			buildConfigurationList = C1DE54AB49A3DDF23BE256A1D87AC2FA /* Build configuration list for PBXNativeTarget "LacrasteCloud" */;
 			buildPhases = (
-				DD6443382EF4EEBA838F253627DFC141 /* Headers */,
-				E79DB005A574D48F9A9D4D27746720D6 /* Sources */,
-				20E027D91607AA51FE7E9256BFDFF257 /* Frameworks */,
-				70A8E16AF2E0A1787DE099DDCD5BCD85 /* Resources */,
+				7325F5920193B5CFB714A366FBCD3363 /* Headers */,
+				D24C210517F7DA5FEAB6B617581F29C8 /* Sources */,
+				669182A4126D61FB0AF74E0128D329B8 /* Frameworks */,
+				E9E2C1E1EDDC0215E842DC7AFF7D501D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -318,7 +464,25 @@
 			);
 			name = LacrasteCloud;
 			productName = LacrasteCloud;
-			productReference = F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud.framework */;
+			productReference = F8E3C0533BB7E5D1CA6DD2B7AF031105 /* LacrasteCloud */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B99E7BEA422C2A5F76CEBB6B0BB32DA8 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				1F9F83AB0EB6C912F72F9817896AF220 /* Headers */,
+				E0FA6A6CAD141A6037B02902C3A83442 /* Sources */,
+				99ED92B216D0FA7F706E8B890A044EAD /* Frameworks */,
+				2B098FD17B7DE66C651AFADA742B0676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -329,11 +493,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
-				TargetAttributes = {
-					CDE8469C8A02A7EFDF94EC4C022456AB = {
-						LastSwiftMigration = 1340;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -344,10 +503,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 77B7D37DAAD33BCA6E1FE22112C11F74 /* Products */;
+			productRefGroup = BFD0A35D4CF0A0F9652F5BA6C0E02F29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
 				CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */,
 				39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */,
 				217693740DDD9331759BCAB22B5DFA06 /* Pods-LacrasteCloud_Tests */,
@@ -356,7 +516,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		70A8E16AF2E0A1787DE099DDCD5BCD85 /* Resources */ = {
+		2B098FD17B7DE66C651AFADA742B0676 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +530,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE0CCB8D062B39EB6E9A40F35D465BAB /* Resources */ = {
+		E7B7B178B4D30CF4314B7B4F8F8C23E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9E2C1E1EDDC0215E842DC7AFF7D501D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,11 +547,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		62DFEBA9B6FD0929497038276189C3B4 /* Sources */ = {
+		5660591C76D36647B1F03D75F30B3AD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA3924DAFC357C83FC7E56674DA29E1 /* Pods-LacrasteCloud_Example-dummy.m in Sources */,
+				5C1F47F00C0D84E9D56405A44781C4C4 /* Pods-LacrasteCloud_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,37 +563,104 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E79DB005A574D48F9A9D4D27746720D6 /* Sources */ = {
+		D24C210517F7DA5FEAB6B617581F29C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80535ADC2864CFEE00ACA7AD /* LacrasteType.swift in Sources */,
-				D1BDD00990BF4B8DE264A66693FCE8BD /* LacrasteCloud-dummy.m in Sources */,
-				80535ADA2864CFBE00ACA7AD /* LacrasteStorage.swift in Sources */,
-				80535AD62864CF3E00ACA7AD /* Lacraste.swift in Sources */,
-				80535ADE2864D04800ACA7AD /* LacrasteErrors.swift in Sources */,
-				80535AD82864CF9300ACA7AD /* Parser.swift in Sources */,
+				19698657F3D074A34B5057BE5294980D /* Lacraste.swift in Sources */,
+				5D6CA58EF1C05DC7B4470FAEFCBDE398 /* LacrasteCloud-dummy.m in Sources */,
+				3EDF29877CC90C227BBF974F9DE982B9 /* LacrasteErrors.swift in Sources */,
+				4818DEE41403E664888FD960E540DB90 /* LacrasteStorage.swift in Sources */,
+				63C3687AE4812889B8A93CDEBB448C95 /* LacrasteType.swift in Sources */,
+				B56E401B350AE5A67F858DE994A30A75 /* Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0FA6A6CAD141A6037B02902C3A83442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4823161DBD529C7BFF79AE9EA2E033 /* AnimatedImageView.swift in Sources */,
+				B81E66D2E50F259201580FB73AE5B053 /* Box.swift in Sources */,
+				DE5EA0F561515BE3A08EF4E61AA0D669 /* CacheSerializer.swift in Sources */,
+				E682D48021700A0CB14CFBB312E908B0 /* Filter.swift in Sources */,
+				87E662D163C07295C9C3EF3D36CC240E /* FormatIndicatedCacheSerializer.swift in Sources */,
+				A03B25361040CCD3494AD95A7A283038 /* Image.swift in Sources */,
+				6681AF1FD538F4733A925E42BD4412B6 /* ImageCache.swift in Sources */,
+				60C639BAF932A36DDF221240B4512423 /* ImageDownloader.swift in Sources */,
+				8826398DD36B6378A4323BC6A6498D67 /* ImageModifier.swift in Sources */,
+				8327B7A541C1348BB74B42E0322152F6 /* ImagePrefetcher.swift in Sources */,
+				DAB1D67788D9BEBCC3157B3E3FB4F00E /* ImageProcessor.swift in Sources */,
+				F94823179D8879708330D21501EF7FA5 /* ImageTransition.swift in Sources */,
+				C07CD77A27192E173EE9ACECA10D12C6 /* ImageView+Kingfisher.swift in Sources */,
+				4BECAF3CB00D9C3D9672413C29C6BF33 /* Indicator.swift in Sources */,
+				CD076312FBCFADF5A5D3A7B825143174 /* Kingfisher.swift in Sources */,
+				39B7ADBBE2DA828B62636B288AB49D7F /* Kingfisher-dummy.m in Sources */,
+				1AEF9993254E6DC249784BC73E1F3E0B /* KingfisherManager.swift in Sources */,
+				1797EBF229ACA3B7F45CC2A602D7CA16 /* KingfisherOptionsInfo.swift in Sources */,
+				4934CA02086672D3B39EDBFF4FBF8210 /* Placeholder.swift in Sources */,
+				83D2000349CA225B1585EE55CA777E61 /* RequestModifier.swift in Sources */,
+				8B7C8723049D635F9391828449049500 /* Resource.swift in Sources */,
+				CB965FB1926761BA3F7FDB8CB83DD5BD /* String+MD5.swift in Sources */,
+				B71899220FE4B4393618C22F64EDF1BA /* ThreadHelper.swift in Sources */,
+				25D230001F255507FE4EC823127F1537 /* UIButton+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		92D02A8DC62CDFAE318FC30B960BD166 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LacrasteCloud;
-			target = CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */;
-			targetProxy = 4382D1CD1FA5815FD3DDD46CEAE0724B /* PBXContainerItemProxy */;
-		};
-		AE0FCF82A431B3B4958B68E4CAA3D6EE /* PBXTargetDependency */ = {
+		5BFBC20145C0699B76B6C3D43E08A9A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LacrasteCloud_Example";
 			target = 39B026F7FDDAA722D8FF002F08879350 /* Pods-LacrasteCloud_Example */;
-			targetProxy = 8D456C6912773A602BD0EBEFE0F03FC0 /* PBXContainerItemProxy */;
+			targetProxy = 509A8C8D6F1E7698056C7476283B4F48 /* PBXContainerItemProxy */;
+		};
+		F81F706D69326D1BF5B853AC42B15FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LacrasteCloud;
+			target = CDE8469C8A02A7EFDF94EC4C022456AB /* LacrasteCloud */;
+			targetProxy = 14384B3C40045837821248A7C6052500 /* PBXContainerItemProxy */;
+		};
+		FCC12EC3E0248E8663EE07553FF01E20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = FFDABD9BF974643657A2A224852A98D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1918BE5B4B96F9E2903C3EB5CF69B07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 767DFFE22879851519CF63F2FB40F775 /* LacrasteCloud.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
+				PRODUCT_MODULE_NAME = LacrasteCloud;
+				PRODUCT_NAME = LacrasteCloud;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -493,39 +727,7 @@
 			};
 			name = Debug;
 		};
-		3B2C7E0696B65FDED2DB554458704A09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64ADCAAFEE554A0F7F3A9CF88C01E8F6 /* LacrasteCloud.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
-				PRODUCT_MODULE_NAME = LacrasteCloud;
-				PRODUCT_NAME = LacrasteCloud;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9E60F37B8F8133DDCAD9AAE6B5986F4C /* Debug */ = {
+		8EA244D1E411235E1641EAA11C86C21E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92B6787F2DD0A13E42D60A537CA3CB4D /* Pods-LacrasteCloud_Example.debug.xcconfig */;
 			buildSettings = {
@@ -557,11 +759,10 @@
 			};
 			name = Debug;
 		};
-		A0F20F88869A8B59CA0035D4E761F71E /* Release */ = {
+		93DA681E471A3DB9F86A213E58BAAB6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */;
+			baseConfigurationReference = 1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -570,19 +771,49 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96D816043C1E6DD5F179E14AA2A54A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD5907D36A82BB63858970F406FE198 /* LacrasteCloud.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
+				PRODUCT_MODULE_NAME = LacrasteCloud;
+				PRODUCT_NAME = LacrasteCloud;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -622,11 +853,11 @@
 			};
 			name = Debug;
 		};
-		A8C0FACD3888ABEE290D3409C0282382 /* Debug */ = {
+		A9EDF363A84CD9459E16B79A8C09C741 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2909BE632E7C02CE28405D68DA85630 /* LacrasteCloud.debug.xcconfig */;
+			baseConfigurationReference = 9072DA8C770F514FE2ABE0B6FE2139D3 /* Pods-LacrasteCloud_Example.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -635,24 +866,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LacrasteCloud/LacrasteCloud-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LacrasteCloud/LacrasteCloud.modulemap";
-				PRODUCT_MODULE_NAME = LacrasteCloud;
-				PRODUCT_NAME = LacrasteCloud;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -709,11 +941,42 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		DAF169EBF89A22FB533ADD7496F74BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		F3035976656D55D926DF44A9D90C9916 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -760,11 +1023,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BCDD6816E4687E576EBC9FB23044B50 /* Build configuration list for PBXNativeTarget "LacrasteCloud" */ = {
+		4A965C3AB0DFA90A248E4ECF84B012B0 /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8C0FACD3888ABEE290D3409C0282382 /* Debug */,
-				3B2C7E0696B65FDED2DB554458704A09 /* Release */,
+				8EA244D1E411235E1641EAA11C86C21E /* Debug */,
+				A9EDF363A84CD9459E16B79A8C09C741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -778,11 +1041,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E520411A101FB5FF4E55A5326A953FDC /* Build configuration list for PBXNativeTarget "Pods-LacrasteCloud_Example" */ = {
+		B99E7BEA422C2A5F76CEBB6B0BB32DA8 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E60F37B8F8133DDCAD9AAE6B5986F4C /* Debug */,
-				A0F20F88869A8B59CA0035D4E761F71E /* Release */,
+				DAF169EBF89A22FB533ADD7496F74BBB /* Debug */,
+				93DA681E471A3DB9F86A213E58BAAB6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1DE54AB49A3DDF23BE256A1D87AC2FA /* Build configuration list for PBXNativeTarget "LacrasteCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1918BE5B4B96F9E2903C3EB5CF69B07C /* Debug */,
+				96D816043C1E6DD5F179E14AA2A54A7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

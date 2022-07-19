@@ -1,16 +1,23 @@
 PODS:
+  - Kingfisher (4.10.1)
   - LacrasteCloud (0.1.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - LacrasteCloud (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   LacrasteCloud:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LacrasteCloud: 20c027e008d9e6be597f3c8f7b1d6e5a2e10edd3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  LacrasteCloud: 72ba2bd3018535b2e9556731015b631203608d2d
 
-PODFILE CHECKSUM: 735ed0847d15e0f397ff21749157b2682b0b97b2
+PODFILE CHECKSUM: 7b6c28d30257d8db148150a27d8fb16e08aac85a
 
 COCOAPODS: 1.11.2

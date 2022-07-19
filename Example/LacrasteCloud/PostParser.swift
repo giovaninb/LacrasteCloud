@@ -14,13 +14,20 @@ class PostParser: Parser {
     
     func fromRecord(_ record: CKRecord) throws -> LacrasteStorage {
         let recordName = record.recordID.recordName
-        
-        guard let name = record["name"] as? String,
-              let simpleDescription = record["simpleDescription"] as? String
-        else { throw ParsingError.DDCParsingError }
-        
-        let post = Post(recordName: recordName, name: name, simpleDescription: simpleDescription)
-        return post
+     
+        if let name = record["name"] as? String,
+           let simpleDescription = record["simpleDescription"] as? String,
+           let image = record["image"] as? CKAsset {
+            
+            let post = Post(recordName: recordName, name: name, simpleDescription: simpleDescription, image: image)
+            return post
+        } else {
+            let name = record["name"] as? String ?? ""
+            let simpleDescription = record["simpleDescription"] as? String ?? ""
+            let post = Post(recordName: recordName, name: name, simpleDescription: simpleDescription)
+            return post
+            //throw ParsingError.DDCParsingError
+        }
     }
     
     func toRecord(_ storable: LacrasteStorage) throws -> CKRecord {
@@ -30,6 +37,7 @@ class PostParser: Parser {
         let record = Lacraste.record(from: post)
         record.setValue(post.name, forKey: "name")
         record.setValue(post.simpleDescription, forKey: "simpleDescription")
+        record.setValue(post.image, forKey: "image")
         return record
     }
     
