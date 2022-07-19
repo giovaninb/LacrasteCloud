@@ -57,6 +57,7 @@ class MainViewController: UITableViewController {
     }
     
     private func deletePost(withId id: String) {
+        
         Lacraste.remove(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), id) { result in
             
             switch result {
@@ -91,14 +92,26 @@ class MainViewController: UITableViewController {
         return posts.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = post.name
-        cell.detailTextLabel?.text = post.simpleDescription
+        let identifier = "MainTableViewCell"
+        guard let customCell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? MainTableViewCell
+        else {
+            fatalError("There should be a cell with \(identifier) identifier.")
+        }
+        customCell.post = post
+        customCell.setupData()
         
-        return cell
+//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+//        cell.textLabel?.text = post.name
+//        cell.detailTextLabel?.text = post.simpleDescription
+        
+        return customCell
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

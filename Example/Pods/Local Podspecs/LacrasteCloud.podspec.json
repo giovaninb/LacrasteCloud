@@ -1,18 +1,18 @@
 {
   "name": "LacrasteCloud",
   "version": "0.1.0",
-  "summary": "A short description of LacrasteCloud.",
+  "summary": "LacrasteCloud makes CloudKit operations easier and less verbose.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Giovani Bettoni/LacrasteCloud",
+  "homepage": "https://github.com/giovaninb/LacrasteCloud",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Giovani Bettoni": "bettoni.gn@gmail.com"
+    "Giovani Bettoni": "giovanibettoni@icloud.com"
   },
   "source": {
-    "git": "https://github.com/Giovani Bettoni/LacrasteCloud.git",
+    "git": "https://github.com/giovaninb/LacrasteCloud.git",
     "tag": "0.1.0"
   },
   "platforms": {

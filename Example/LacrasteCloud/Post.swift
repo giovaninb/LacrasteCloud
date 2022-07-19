@@ -16,10 +16,11 @@ struct Post: LacrasteStorage {
     static var reference: String = "Post"
     static var parser: Parser = PostParser()
     
-    /// Storable attributes
+    ///  attributes
     var recordName: String?
     
     /// Custom attributes
     var name: String
     var simpleDescription: String?
+    var image: CKAsset?
 }

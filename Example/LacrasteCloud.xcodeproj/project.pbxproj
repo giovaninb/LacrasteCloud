@@ -20,6 +20,7 @@
 		80535AE82873716500ACA7AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AE72873716500ACA7AD /* UIViewController+Extensions.swift */; };
 		80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80535AEA287371C000ACA7AD /* PostViewController.swift */; };
 		80535AEF28737BB200ACA7AD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80535AEE28737BB200ACA7AD /* CloudKit.framework */; };
+		8087A4322885E0E200A09914 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087A4312885E0E200A09914 /* MainTableViewCell.swift */; };
 		80E33103287775FA00C55963 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E33102287775F900C55963 /* LoginViewController.swift */; };
 		80E3310528777C7C00C55963 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3310428777C7C00C55963 /* User.swift */; };
 		80E3310728777CFF00C55963 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3310628777CFF00C55963 /* UserParser.swift */; };
@@ -56,6 +57,7 @@
 		80535AEA287371C000ACA7AD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		80535AED28737BAD00ACA7AD /* LacrasteCloud_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LacrasteCloud_Example.entitlements; sourceTree = "<group>"; };
 		80535AEE28737BB200ACA7AD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		8087A4312885E0E200A09914 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		80E33102287775F900C55963 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80E3310428777C7C00C55963 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80E3310628777CFF00C55963 /* UserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				607FACD71AFB9204008FA782 /* MainViewController.swift */,
 				80535AEA287371C000ACA7AD /* PostViewController.swift */,
 				80E33102287775F900C55963 /* LoginViewController.swift */,
+				8087A4312885E0E200A09914 /* MainTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,10 +334,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LacrasteCloud_Example/Pods-LacrasteCloud_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LacrasteCloud/LacrasteCloud.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LacrasteCloud.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +402,7 @@
 				80535AEB287371C000ACA7AD /* PostViewController.swift in Sources */,
 				80535AE2287369F300ACA7AD /* Post.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				8087A4322885E0E200A09914 /* MainTableViewCell.swift in Sources */,
 				80E3310728777CFF00C55963 /* UserParser.swift in Sources */,
 				80E3310528777C7C00C55963 /* User.swift in Sources */,
 				80535AE428736A9D00ACA7AD /* PostParser.swift in Sources */,
