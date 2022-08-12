@@ -20,7 +20,7 @@ class UserParser: Parser {
     
     func toRecord(_ storable: LacrasteStorage) throws -> CKRecord {
         guard let user = storable as? User
-        else { throw ParsingError.DDCParsingError }
+        else { throw ParsingError.LCParsingError }
         
         let record = Lacraste.record(from: user)
         return record

@@ -41,12 +41,12 @@ public struct Lacraste {
         container.fetchUserRecordID { (result, error) in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.LCDataRetrieval))
                 return
             }
             
             guard let result = result else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
@@ -73,12 +73,12 @@ public struct Lacraste {
                     results, error in
                     
                     if error != nil {
-                        completion(.failure(LacrasteErrors.DDCDataRetrieval))
+                        completion(.failure(LacrasteErrors.LCDataRetrieval))
                         return
                     }
                     
                     guard let results = results else {
-                        completion(.failure(LacrasteErrors.DDCNullReturn))
+                        completion(.failure(LacrasteErrors.LCNullReturn))
                         return
                     }
                     
@@ -86,7 +86,7 @@ public struct Lacraste {
                     for record in results {
                         guard let value = (try? T.parser.fromRecord(record)) as? T
                         else {
-                            completion(.failure(LacrasteErrors.DDCParsingFailure))
+                            completion(.failure(LacrasteErrors.LCParsingFailure))
                             return
                         }
                         values.append(value)
@@ -117,12 +117,12 @@ public struct Lacraste {
             results, error in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.LCDataRetrieval))
                 return
             }
             
             guard let results = results else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
@@ -130,7 +130,7 @@ public struct Lacraste {
             for record in results {
                 guard let value = (try? T.parser.fromRecord(record)) as? T
                 else {
-                    completion(.failure(LacrasteErrors.DDCParsingFailure))
+                    completion(.failure(LacrasteErrors.LCParsingFailure))
                     return
                 }
                 
@@ -141,7 +141,7 @@ public struct Lacraste {
         }
     }
     
-    /// Fetch all records of L
+    /// Fetch all records of T
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
@@ -152,13 +152,13 @@ public struct Lacraste {
         storageType.database.perform(query, inZoneWith: nil) { results, error in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.LCDataRetrieval))
                 return
             }
             
             guard let result = results
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
@@ -167,7 +167,7 @@ public struct Lacraste {
             for record in result {
                 guard let value = (try? T.parser.fromRecord(record)) as? T
                 else {
-                    completion(.failure(LacrasteErrors.DDCParsingFailure))
+                    completion(.failure(LacrasteErrors.LCParsingFailure))
                     return
                 }
                 values.append(value)
@@ -176,8 +176,53 @@ public struct Lacraste {
             completion(.success(values))
         }
     }
+
+
+    /// Fetch all records of T - With pagination by resultsLimit
+    /// - Parameters:
+    ///   - storageType: Which database to perform the query
+    ///   - numberOfRecords: Number of number of Records by default
+    ///   - completion: Result object containing all fetched records or an error
+    public static func getAllPaginatedAndSorted<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), type: T.Type = T.self, numberOfRecords: Int, _ completionHandler: @escaping PagedCompletion<T>) {
+        var listOfRecords: [T] = [] // A place to store the items as we get them
+
+        let query = CKQuery(recordType: T.reference, predicate: NSPredicate(value: true))
+        let sortCreation = NSSortDescriptor(key: "creationDate", ascending: false)
+        let sortModification = NSSortDescriptor(key: "modificationDate", ascending: false)
+        query.sortDescriptors = [sortCreation, sortModification]
+
+        let queryOperation = CKQueryOperation(query: query)
+        queryOperation.resultsLimit = numberOfRecords
+
+        // As we get each record, lets store them in the array
+        queryOperation.recordFetchedBlock = { record in
+            guard let value = (try? T.parser.fromRecord(record)) as? T
+            else {
+                completionHandler(.failure(LacrasteErrors.LCParsingFailure))
+                return
+            }
+            listOfRecords.append(value)
+        }
+
+        // Have another closure for when the download is complete
+        queryOperation.queryCompletionBlock = { cursor, error in
+            print(">>>> cursor: \(cursor)")
+            if error != nil {
+                completionHandler(.failure(LacrasteErrors.LCDataRetrieval))
+            } else {
+                if let cursor = cursor {
+                    let pageFetcher = PageFetcher<T>(cursor: cursor, storageType: storageType, numberOfRecords: numberOfRecords)
+                    completionHandler(.success((listOfRecords, pageFetcher)))
+                } else {
+                    completionHandler(.success((listOfRecords, nil)))
+                }
+            }
+        }
+
+        storageType.database.add(queryOperation)
+    }
     
-    /// Fetch all records of L - without CloudKit default results limitation
+    /// Fetch all records of T - without CloudKit default results limitation
     /// - Parameters:
     ///   - storageType: Which database to perform the query
     ///   - completion: Result object containing all fetched records or an error
@@ -191,7 +236,7 @@ public struct Lacraste {
         queryOperation.recordFetchedBlock = { record in
             guard let value = (try? T.parser.fromRecord(record)) as? T
             else {
-                completionHandler(.failure(LacrasteErrors.DDCParsingFailure))
+                completionHandler(.failure(LacrasteErrors.LCParsingFailure))
                 return
             }
             listOfRecords.append(value)
@@ -200,7 +245,7 @@ public struct Lacraste {
         // Have another closure for when the download is complete
         queryOperation.queryCompletionBlock = { cursor, error in
             if error != nil {
-                completionHandler(.failure(LacrasteErrors.DDCDataRetrieval))
+                completionHandler(.failure(LacrasteErrors.LCDataRetrieval))
             } else {
                 completionHandler(.success(listOfRecords))
             }
@@ -220,19 +265,19 @@ public struct Lacraste {
         storageType.database.fetch(withRecordID: recordID) { result, error in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRetrieval))
+                completion(.failure(LacrasteErrors.LCDataRetrieval))
                 return
             }
             
             guard let record = result
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
             guard let value = (try? T.parser.fromRecord(record)) as? T
             else {
-                completion(.failure(LacrasteErrors.DDCParsingFailure))
+                completion(.failure(LacrasteErrors.LCParsingFailure))
                 return
             }
             completion(.success(value))
@@ -248,25 +293,25 @@ public struct Lacraste {
         
         guard let record = try? T.parser.toRecord(storage)
         else {
-            return completion(.failure(LacrasteErrors.DDCParsingFailure))
+            return completion(.failure(LacrasteErrors.LCParsingFailure))
         }
 
         storageType.database.save(record) { (savedRecord, error) in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataInsertion))
+                completion(.failure(LacrasteErrors.LCDataInsertion))
                 return
             }
             
             guard let savedRecord = savedRecord
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
             guard let value = (try? T.parser.fromRecord(savedRecord)) as? T
             else {
-                completion(.failure(LacrasteErrors.DDCParsingFailure))
+                completion(.failure(LacrasteErrors.LCParsingFailure))
                 return
             }
             
@@ -283,7 +328,7 @@ public struct Lacraste {
         
         guard let record = try? T.parser.toRecord(storage)
         else {
-            completion(.failure(LacrasteErrors.DDCParsingFailure))
+            completion(.failure(LacrasteErrors.LCParsingFailure))
             return
         }
                 
@@ -293,13 +338,13 @@ public struct Lacraste {
         operation.modifyRecordsCompletionBlock = { (updatedRecords, _, error) in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataUpdate))
+                completion(.failure(LacrasteErrors.LCDataUpdate))
                 return
             }
             
             guard let recordName = updatedRecords?.first?.recordID.recordName
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
@@ -320,13 +365,13 @@ public struct Lacraste {
         storageType.database.delete(withRecordID: recordID) { (recordID, error) in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRemoval))
+                completion(.failure(LacrasteErrors.LCDataRemoval))
                 return
             }
             
             guard let recordID = recordID
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             completion(.success(recordID.recordName))
@@ -346,13 +391,13 @@ public struct Lacraste {
         operation.modifyRecordsCompletionBlock = { (_, deletedRecordIDs, error) in
             
             if error != nil {
-                completion(.failure(LacrasteErrors.DDCDataRemoval))
+                completion(.failure(LacrasteErrors.LCDataRemoval))
                 return
             }
             
             guard let recordIDs = deletedRecordIDs
             else {
-                completion(.failure(LacrasteErrors.DDCNullReturn))
+                completion(.failure(LacrasteErrors.LCNullReturn))
                 return
             }
             
@@ -376,7 +421,7 @@ public struct Lacraste {
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(LacrasteErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.LCNullRecord))
                     return
                 }
                                 
@@ -406,7 +451,7 @@ public struct Lacraste {
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(LacrasteErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.LCNullRecord))
                     return
                 }
                                 
@@ -438,7 +483,7 @@ public struct Lacraste {
             case .success(let values):
                 guard let recordNames = values.map({ $0.recordName }) as? [String]
                 else {
-                    completion(.failure(LacrasteErrors.DDCNullRecord))
+                    completion(.failure(LacrasteErrors.LCNullRecord))
                     return
                 }
                                 

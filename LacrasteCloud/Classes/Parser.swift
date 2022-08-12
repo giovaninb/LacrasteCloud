@@ -12,4 +12,4 @@ public protocol Parser {
     func toRecord(_ storable: LacrasteStorage) throws -> CKRecord
 }
 
-public enum ParsingError: Error { case DDCParsingError }
+public enum ParsingError: Error { case LCParsingError }

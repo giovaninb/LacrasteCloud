@@ -32,7 +32,7 @@ class PostParser: Parser {
     
     func toRecord(_ storable: LacrasteStorage) throws -> CKRecord {
         guard let post = storable as? Post
-        else { throw ParsingError.DDCParsingError }
+        else { throw ParsingError.LCParsingError }
         
         let record = Lacraste.record(from: post)
         record.setValue(post.name, forKey: "name")
