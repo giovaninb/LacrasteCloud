@@ -14,7 +14,6 @@ import LacrasteCloud
 class MainViewController: UITableViewController {
 
     var postsList: [Post] = []
-    var lastPage: Bool = false
     var pageFetcher: PageFetcher<Post>?
     let numberOfRecords: Int = 4
     
@@ -93,7 +92,6 @@ class MainViewController: UITableViewController {
     
     private func deletePost(withId id: String) {
         Lacraste.remove(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), id) { result in
-            
             switch result {
             case .success(_):
                 break

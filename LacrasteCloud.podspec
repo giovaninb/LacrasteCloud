@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'LacrasteCloud'
   s.version          = '0.1.2'
-  s.summary          = 'LacrasteCloud makes CloudKit operations easier and less verbose.'
-
+  s.summary          = 'LacrasteCloud makes CloudKit operations easier.'
+  
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  LacrasteCloud makes CloudKit CRUD operations easier and less verbose It can be done some pagination and sort.
                        DESC
 
   s.homepage         = 'https://github.com/giovaninb/LacrasteCloud'

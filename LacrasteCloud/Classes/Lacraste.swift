@@ -230,6 +230,9 @@ public struct Lacraste {
         var listOfRecords: [T] = [] // A place to store the items as we get them
         
         let query = CKQuery(recordType: T.reference, predicate: NSPredicate(value: true))
+        let sortCreation = NSSortDescriptor(key: "creationDate", ascending: false)
+        let sortModification = NSSortDescriptor(key: "modificationDate", ascending: false)
+        query.sortDescriptors = [sortCreation, sortModification]
         let queryOperation = CKQueryOperation(query: query)
         
         // As we get each record, lets store them in the array
