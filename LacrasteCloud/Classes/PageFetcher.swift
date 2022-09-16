@@ -40,7 +40,7 @@ public class PageFetcher<T: LacrasteStorage> {
 
         // Have another closure for when the download is complete
         queryOperation.queryCompletionBlock = { [self] cursor, error in
-            print(">>>> cursor: \(cursor)")
+            //print(">>>> cursor: \(cursor)")
             if error != nil {
                 completionHandler(.failure(LacrasteErrors.LCDataRetrieval))
             } else {

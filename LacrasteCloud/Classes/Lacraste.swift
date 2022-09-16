@@ -54,6 +54,61 @@ public struct Lacraste {
             
         }
     }
+
+
+    /// Fetch all subscriptions of T
+    /// - Parameters:
+    ///   - storageType: Which database to perform the query
+    ///   - storage: The Storage object to  e inserted
+    ///   - completion: Result object containing all fetched subscriptions or an error
+    public static func fetchAllSubscription<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), _ storage: T, _  completion: @escaping (Result<[CKSubscription], Error>) -> Void) {
+
+        storageType.database.fetchAllSubscriptions { subscriptions, error in
+            if subscriptions != nil {
+                completion(.failure(LacrasteErrors.LCDataRetrieval))
+            }
+
+            guard let subscriptions = subscriptions
+            else {
+                completion(.failure(LacrasteErrors.LCNullReturn))
+                return
+            }
+
+            completion(.success(subscriptions))
+
+        }
+
+    }
+
+
+    /// Create a subscription in the database
+    /// - Parameters:
+    ///   - storageType: Which database to perform the query
+    ///   - storage: The Storage object to  e inserted
+    ///   - completion: Result object containing the created record  or an error
+    public static func createSubscription<T: LacrasteStorage>(storageType: LacrasteType = .privateStorage(), type: T.Type = T.self, _ notificationInfo: CKSubscription.NotificationInfo, _  completion: @escaping (Result<CKSubscription, Error>) -> Void) {
+
+        if #available(iOS 10.0, *) {
+            let newSubscription = CKQuerySubscription(recordType: T.reference,
+                                                      predicate: NSPredicate(value: true),
+                                                      options: [.firesOnRecordCreation, .firesOnRecordDeletion])
+
+            newSubscription.notificationInfo = notificationInfo
+            storageType.database.save(newSubscription) { result, error in
+
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+
+                completion(.success(newSubscription))
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+
+
+    }
     
     /// Fetch all records of T owned by current user
     /// - Parameters:
@@ -192,6 +247,7 @@ public struct Lacraste {
         query.sortDescriptors = [sortCreation, sortModification]
 
         let queryOperation = CKQueryOperation(query: query)
+        queryOperation.qualityOfService = .userInteractive
         queryOperation.resultsLimit = numberOfRecords
 
         // As we get each record, lets store them in the array
@@ -206,7 +262,7 @@ public struct Lacraste {
 
         // Have another closure for when the download is complete
         queryOperation.queryCompletionBlock = { cursor, error in
-            print(">>>> cursor: \(cursor)")
+            //print(">>>> cursor: \(cursor)")
             if error != nil {
                 completionHandler(.failure(LacrasteErrors.LCDataRetrieval))
             } else {
@@ -233,8 +289,9 @@ public struct Lacraste {
         let sortCreation = NSSortDescriptor(key: "creationDate", ascending: false)
         let sortModification = NSSortDescriptor(key: "modificationDate", ascending: false)
         query.sortDescriptors = [sortCreation, sortModification]
+
         let queryOperation = CKQueryOperation(query: query)
-        
+        queryOperation.qualityOfService = .userInteractive
         // As we get each record, lets store them in the array
         queryOperation.recordFetchedBlock = { record in
             guard let value = (try? T.parser.fromRecord(record)) as? T

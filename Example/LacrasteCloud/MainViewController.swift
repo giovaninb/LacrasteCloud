@@ -9,16 +9,28 @@
 import UIKit
 import CloudKit
 import LacrasteCloud
+import UserNotifications
+import os.log
 
 @available(iOS 11.0, *)
-class MainViewController: UITableViewController {
+class MainViewController: UITableViewController, UNUserNotificationCenterDelegate {
 
     var postsList: [Post] = []
     var pageFetcher: PageFetcher<Post>?
     let numberOfRecords: Int = 4
+    let notificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) {
+            (permissionGranted, error) in
+            if(!permissionGranted) {
+                print("Permission Denied")
+            } else {
+                print("Permission Granted")
+            }
+        }
 
     }
 
@@ -29,6 +41,10 @@ class MainViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         refreshTable()
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .banner, .sound])
     }
     
     func refreshTable() {
@@ -47,10 +63,8 @@ class MainViewController: UITableViewController {
     }
 
     func fetchPostsList() {
-        print(">>> before: \(self.numberOfRecords)")
         if pageFetcher != nil || postsList.isEmpty {
             fetchPosts(numberOfRecords: self.numberOfRecords)
-            print(">> after: \(self.numberOfRecords)")
         }
     }
 
@@ -63,6 +77,27 @@ class MainViewController: UITableViewController {
         self.resetNumberOfPosts()
         self.reloadTableView()
         self.fetchPostsList()
+        self.createPostSubscription()
+    }
+
+    private func createPostSubscription() {
+
+        let newNotificationInfo = CKSubscription.NotificationInfo()
+        //newNotificationInfo.shouldSendMutableContent = true
+        newNotificationInfo.soundName = "default"
+        newNotificationInfo.titleLocalizationKey = "%1$@"
+        newNotificationInfo.titleLocalizationArgs = ["name"]
+        newNotificationInfo.alertLocalizationKey = "%1$@"
+        newNotificationInfo.alertLocalizationArgs = ["simpleDescription"]
+
+        Lacraste.createSubscription(storageType: .publicStorage(customContainer: "iCloud.org.cocoapods.demo.LacrasteCloud-Example"), type: Post.self, newNotificationInfo) { result in
+            switch result {
+            case .success(let subs):
+                print("Done on PostViewController \(subs)")
+            case .failure(let error):
+                self.showErrorAlert(error.localizedDescription)
+            }
+        }
     }
     
     private func fetchPosts(numberOfRecords: Int) {
@@ -185,9 +220,7 @@ class MainViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
         let lastElement = postsList.count
-        print(">>>>>>> le \(lastElement)")
 
         if indexPath.row == lastElement - 3 {
             let spinner = UIActivityIndicatorView(style: .medium)

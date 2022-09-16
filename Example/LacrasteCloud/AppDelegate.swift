@@ -8,22 +8,42 @@
 
 import UIKit
 import CloudKit
+import UserNotifications
+import os.log
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        let query = CKQuery(recordType: "Post", predicate: NSPredicate(value: true))
-//        CKContainer.init(identifier: "iCloud.org.cocoapods.demo.LacrasteCloud-Example").privateCloudDatabase.perform(query, inZoneWith: nil, completionHandler: { (result, error) in
-//            print(result)
-//            print(error)
-//        })
-        
+
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                os_log("Wait, error: \(error.localizedDescription)")
+            } else {
+                if !granted {
+                    os_log("Permission not granted on App Delegate")
+                } else {
+                    os_log("Permission granted on App Delegate")
+                }
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+                }
+
+            }
+        }
         return true
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Register: \(deviceToken.debugDescription)")
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Fail to Register")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
